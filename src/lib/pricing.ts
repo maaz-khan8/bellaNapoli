@@ -1,6 +1,7 @@
 import type {
   CartItem,
   CartTotals,
+  PromoError,
   FulfillmentType,
   Product,
   Promotion,
@@ -50,18 +51,14 @@ export function evaluatePromo(
   code: string | undefined,
   promotions: Promotion[],
   subtotal: number,
-): { promo?: Promotion; error?: string } {
+): { promo?: Promotion; error?: PromoError } {
   if (!code) return {};
   const promo = findPromotion(code, promotions);
-  if (!promo || !promo.active) return { error: "This promo code isn't valid." };
+  if (!promo || !promo.active) return { error: { kind: "invalid" } };
   if (subtotal < promo.minSubtotal) {
-    return { error: `Add ${formatMoney(promo.minSubtotal - subtotal)} more to use ${promo.code}.` };
+    return { error: { kind: "minimum", code: promo.code, amount: round2(promo.minSubtotal - subtotal) } };
   }
   return { promo };
-}
-
-function formatMoney(n: number) {
-  return `$${n.toFixed(2)}`;
 }
 
 /**

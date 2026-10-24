@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { useParams } from "next/navigation";
 import { PizzaIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,16 +16,17 @@ export default function ProductPage() {
   const { slug } = useParams<{ slug: string }>();
   const hydrated = useHydrated();
   const { products } = useCatalog();
+  const t = useTranslations("product");
   const product = products.find((p) => p.slug === slug);
 
   if (!product) {
-    if (!hydrated) return <PageLoader label="Loading pizza" />;
+    if (!hydrated) return <PageLoader />;
     return (
       <EmptyState
         icon={PizzaIcon}
-        title="We couldn't find that item"
-        description="It may have been removed from the menu. Take a look at what's fresh from the oven today."
-        action={<Button asChild className="h-11 rounded-full px-6"><Link href="/menu">Back to menu</Link></Button>}
+        title={t("notFound")}
+        description={t("notFoundBody")}
+        action={<Button asChild className="h-11 rounded-full px-6"><Link href="/menu">{t("backToMenu")}</Link></Button>}
         className="min-h-[60vh]"
       />
     );
@@ -40,7 +42,7 @@ export default function ProductPage() {
       {related.length > 0 && (
         <section className="bg-cream-200/60 py-16" aria-labelledby="related-heading">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 id="related-heading" className="font-display text-3xl font-semibold">You might also like</h2>
+            <h2 id="related-heading" className="font-display text-3xl font-semibold">{t("related")}</h2>
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {related.map((p) => <ProductCard key={p.id} product={p} />)}
             </div>

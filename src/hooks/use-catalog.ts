@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { useTranslations } from "next-intl";
 import { useDataStore } from "@/store/data-store";
 
 /** Customer-visible catalogue: enabled categories in manager-defined order, and their products. */
@@ -19,11 +20,12 @@ export function useCatalog() {
 /** Whether customers can place orders right now, and why not if they can't. */
 export function useOrderingStatus() {
   const restaurant = useDataStore((s) => s.restaurant);
+  const t = useTranslations("ordering");
   if (!restaurant.platformActive || restaurant.approvalStatus === "suspended") {
-    return { canOrder: false, reason: `${restaurant.name} is temporarily unavailable for online orders.` };
+    return { canOrder: false, reason: t("unavailable", { name: restaurant.name }) };
   }
   if (!restaurant.acceptingOrders) {
-    return { canOrder: false, reason: "The kitchen is not accepting online orders right now. Please check back soon." };
+    return { canOrder: false, reason: t("paused") };
   }
   return { canOrder: true, reason: "" };
 }

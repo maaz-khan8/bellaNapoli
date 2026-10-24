@@ -2,6 +2,7 @@
 
 import { useId, cloneElement, isValidElement } from "react";
 import { AlertCircle } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 
@@ -26,6 +27,9 @@ export function FormField({
   id?: string;
   children: React.ReactElement<Record<string, unknown>>;
 }) {
+  const t = useTranslations();
+  // Zod schemas on the customer site use message keys (e.g. "validation.emailInvalid")
+  const errorText = error && t.has(error as never) ? t(error as never) : error;
   const autoId = useId();
   const id = idProp ?? autoId;
   const hintId = hint ? `${id}-hint` : undefined;
@@ -60,7 +64,7 @@ export function FormField({
       {error && (
         <p id={errorId} role="alert" className="flex items-center gap-1 text-xs font-medium text-destructive">
           <AlertCircle className="size-3.5 shrink-0" aria-hidden="true" />
-          {error}
+          {errorText}
         </p>
       )}
     </div>

@@ -2,6 +2,8 @@
 
 import { useCallback } from "react";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
+import { useContent } from "@/hooks/use-content";
 import type { Order, SelectedOption } from "@/lib/types";
 import { configuredUnitPrice } from "@/lib/pricing";
 import { useCartStore } from "@/store/cart-store";
@@ -13,6 +15,8 @@ export function useReorder() {
   const addItem = useCartStore((s) => s.addItem);
   const setCartOpen = useUIStore((s) => s.setCartOpen);
   const pulseCart = useUIStore((s) => s.pulseCart);
+  const t = useTranslations("cart");
+  const content = useContent();
 
   return useCallback(
     (order: Order) => {
@@ -22,7 +26,7 @@ export function useReorder() {
       for (const line of order.items) {
         const product = products.find((p) => p.id === line.productId);
         if (!product || !product.available) {
-          skipped.push(line.name);
+          skipped.push(content.orderItemName(line));
           continue;
         }
         const sizeDef = line.size ? product.sizes.find((s) => line.size!.startsWith(s.label)) : undefined;
@@ -49,13 +53,13 @@ export function useReorder() {
       if (added) {
         pulseCart();
         setCartOpen(true);
-        toast.success(`Added ${added} item${added > 1 ? "s" : ""} from order ${order.number}`, {
-          description: skipped.length ? `Unavailable today: ${skipped.join(", ")}` : "Prices reflect today's menu.",
+        toast.success(t("reordered", { count: added, number: order.number }), {
+          description: skipped.length ? t("unavailableToday", { items: skipped.join(", ") }) : t("todaysPrices"),
         });
       } else {
-        toast.error("Nothing from this order is available right now.");
+        toast.error(t("nothingAvailable"));
       }
     },
-    [addItem, setCartOpen, pulseCart],
+    [addItem, setCartOpen, pulseCart, t, content],
   );
 }

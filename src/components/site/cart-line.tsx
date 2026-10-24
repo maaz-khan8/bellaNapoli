@@ -1,14 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { useContent } from "@/hooks/use-content";
+import { useFormat } from "@/hooks/use-format";
 import { motion } from "motion/react";
 import { Trash2 } from "lucide-react";
 import type { CartItem } from "@/lib/types";
 import { QuantityStepper } from "@/components/shared/quantity-stepper";
 import { useCartStore } from "@/store/cart-store";
 import { useDataStore } from "@/store/data-store";
-import { formatCurrency } from "@/lib/format";
 import { lineTotal } from "@/lib/pricing";
 import { cn } from "@/lib/utils";
 
@@ -16,11 +18,15 @@ export function CartLine({ item, size = "md" }: { item: CartItem; size?: "sm" | 
   const updateQuantity = useCartStore((s) => s.updateQuantity);
   const removeItem = useCartStore((s) => s.removeItem);
   const product = useDataStore((s) => s.products.find((p) => p.id === item.productId));
+  const t = useTranslations("cart");
+  const content = useContent();
+  const f = useFormat();
+  const name = content.productName({ id: item.productId, name: item.name });
   const details = [
-    item.size?.name,
-    item.crust?.name,
-    ...item.toppings.map((t) => `+ ${t.name}`),
-    ...item.addons.map((a) => `+ ${a.name}`),
+    item.size && content.sizeText(item.size.name),
+    item.crust && content.crustName(item.crust),
+    ...item.toppings.map((o) => `+ ${content.toppingName(o.id, o.name)}`),
+    ...item.addons.map((o) => `+ ${content.addonName(o.id, o.name)}`),
   ].filter(Boolean);
   const unavailable = !product || !product.available;
 
@@ -42,27 +48,27 @@ export function CartLine({ item, size = "md" }: { item: CartItem; size?: "sm" | 
       </Link>
       <div className="flex min-w-0 flex-1 flex-col">
         <div className="flex items-start justify-between gap-2">
-          <p className="font-semibold leading-snug">{item.name}</p>
-          <p className="tabular shrink-0 font-semibold">{formatCurrency(lineTotal(item))}</p>
+          <p className="font-semibold leading-snug">{name}</p>
+          <p className="tabular shrink-0 font-semibold">{f.currency(lineTotal(item))}</p>
         </div>
         {details.length > 0 && <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">{details.join(" · ")}</p>}
         {item.notes && <p className="mt-0.5 text-xs italic text-muted-foreground">“{item.notes}”</p>}
-        {unavailable && <p className="mt-1 text-xs font-medium text-destructive">This item is currently unavailable — please remove it to check out.</p>}
+        {unavailable && <p className="mt-1 text-xs font-medium text-destructive">{t("unavailable")}</p>}
         <div className="mt-auto flex items-center justify-between gap-2 pt-2">
           <QuantityStepper
             size="sm"
             value={item.quantity}
             min={0}
             onChange={(q) => updateQuantity(item.id, q)}
-            label={`Quantity for ${item.name}`}
+            label={t("quantityFor", { name })}
           />
           <button
             type="button"
             onClick={() => removeItem(item.id)}
             className="inline-flex h-9 items-center gap-1 rounded-lg px-2 text-xs font-medium text-muted-foreground transition hover:bg-destructive/10 hover:text-destructive"
-            aria-label={`Remove ${item.name}`}
+            aria-label={t("remove", { name })}
           >
-            <Trash2 className="size-4" /> <span className="hidden sm:inline">Remove</span>
+            <Trash2 className="size-4" /> <span className="hidden sm:inline">{t("removeShort")}</span>
           </button>
         </div>
       </div>

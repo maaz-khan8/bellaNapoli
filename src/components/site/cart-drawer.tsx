@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { AnimatePresence } from "motion/react";
 import { ArrowRight, ShoppingBag } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
@@ -18,23 +19,24 @@ export function CartDrawer() {
   const items = useCartStore((s) => s.items);
   const totals = useCartTotals();
   const close = () => setOpen(false);
+  const t = useTranslations("cart");
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetContent side="right" className="w-full gap-0 bg-cream-50 p-0 sm:max-w-md">
         <SheetHeader className="border-b px-5 py-4">
           <SheetTitle className="flex items-center gap-2 font-display text-2xl font-semibold">
-            <ShoppingBag className="size-5 text-primary" aria-hidden="true" /> Your order
+            <ShoppingBag className="size-5 text-primary" aria-hidden="true" /> {t("drawerTitle")}
           </SheetTitle>
-          <SheetDescription>{totals.itemCount ? `${totals.itemCount} item${totals.itemCount === 1 ? "" : "s"} from Bella Napoli` : "Nothing here yet"}</SheetDescription>
+          <SheetDescription>{totals.itemCount ? t("drawerCount", { count: totals.itemCount }) : t("drawerEmpty")}</SheetDescription>
         </SheetHeader>
 
         {items.length === 0 ? (
           <EmptyState
             icon={ShoppingBag}
-            title="Your cart is empty"
-            description="Our wood-fired oven is hot and ready. Add a pizza to get started."
-            action={<Button asChild className="h-11 rounded-full px-6" onClick={close}><Link href="/menu">Browse the menu</Link></Button>}
+            title={t("emptyTitle")}
+            description={t("emptyDrawer")}
+            action={<Button asChild className="h-11 rounded-full px-6" onClick={close}><Link href="/menu">{t("browseMenu")}</Link></Button>}
             className="flex-1"
           />
         ) : (
@@ -51,10 +53,10 @@ export function CartDrawer() {
               <TotalsList totals={totals} />
               <div className="grid grid-cols-2 gap-2">
                 <Button asChild variant="outline" className="h-12 rounded-full" onClick={close}>
-                  <Link href="/cart">View cart</Link>
+                  <Link href="/cart">{t("viewCart")}</Link>
                 </Button>
                 <Button asChild className="h-12 rounded-full font-semibold" onClick={close}>
-                  <Link href="/checkout">Checkout <ArrowRight /></Link>
+                  <Link href="/checkout">{t("checkout")} <ArrowRight /></Link>
                 </Button>
               </div>
             </div>

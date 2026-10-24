@@ -53,7 +53,12 @@ function demoHash(input: string) {
   return `demo$${(h >>> 0).toString(36)}`;
 }
 
-export type LoginResult = { ok: true; session: Session } | { ok: false; error: string; wrongPortal?: Role };
+export type AuthErrorCode = "invalidCredentials" | "wrongPortal" | "profileMissing" | "deactivated" | "emailTaken";
+
+/** `error` is an English fallback; UIs translate `code`. */
+export type LoginResult =
+  | { ok: true; session: Session }
+  | { ok: false; code: AuthErrorCode; error: string; wrongPortal?: Role };
 
 interface AuthState {
   sessions: Partial<Record<Role, Session>>;
@@ -92,11 +97,12 @@ export const useAuthStore = create<AuthState>()(
         } else if (registered && registered.passwordHash === demoHash(password)) {
           user = { id: registered.id, email: registered.email, name: registered.name, role: "customer", customerId: registered.customerId };
         }
-        if (!user) return { ok: false, error: "Incorrect email or password. Check the demo credentials below." };
+        if (!user) return { ok: false, code: "invalidCredentials", error: "Incorrect email or password. Check the demo credentials below." };
 
         if (user.role !== portal) {
           return {
             ok: false,
+            code: "wrongPortal",
             wrongPortal: user.role,
             error: `This account doesn't have access here. Please sign in through the ${PORTAL_NAMES[user.role]}.`,
           };
@@ -105,9 +111,9 @@ export const useAuthStore = create<AuthState>()(
         if (user.role === "customer") {
           const customerId = user.customerId;
           const customer = useDataStore.getState().customers.find((c) => c.id === customerId);
-          if (!customer) return { ok: false, error: "We couldn't find this customer profile. Try resetting the demo data." };
+          if (!customer) return { ok: false, code: "profileMissing", error: "We couldn't find this customer profile. Try resetting the demo data." };
           if (customer.status === "inactive") {
-            return { ok: false, error: "This account has been deactivated by the platform. Contact support for help." };
+            return { ok: false, code: "deactivated", error: "This account has been deactivated by the platform. Contact support for help." };
           }
           user = { ...user, name: customer.name, email: customer.email };
         }
@@ -124,7 +130,7 @@ export const useAuthStore = create<AuthState>()(
           DEMO_ACCOUNTS.some((a) => a.email === email) ||
           get().registered.some((a) => a.email === email) ||
           data.customers.some((c) => c.email.toLowerCase() === email);
-        if (taken) return { ok: false, error: "An account with this email already exists. Try signing in instead." };
+        if (taken) return { ok: false, code: "emailTaken", error: "An account with this email already exists. Try signing in instead." };
 
         const customerId = uid("cus");
         data.addCustomer({

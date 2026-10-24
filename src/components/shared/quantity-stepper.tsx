@@ -1,6 +1,7 @@
 "use client";
 
 import { Minus, Plus } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
 export function QuantityStepper({
@@ -9,7 +10,7 @@ export function QuantityStepper({
   min = 1,
   max = 20,
   size = "md",
-  label = "Quantity",
+  label,
   className,
 }: {
   value: number;
@@ -20,11 +21,12 @@ export function QuantityStepper({
   label?: string;
   className?: string;
 }) {
+  const t = useTranslations("common");
   const btn = size === "sm" ? "size-8" : "size-11";
   return (
     <div
       role="group"
-      aria-label={label}
+      aria-label={label ?? t("quantity")}
       className={cn("inline-flex items-center rounded-full bg-muted p-1 ring-1 ring-border", className)}
     >
       <button
@@ -32,7 +34,7 @@ export function QuantityStepper({
         className={cn(btn, "flex items-center justify-center rounded-full bg-background text-foreground shadow-sm transition hover:bg-primary hover:text-primary-foreground disabled:opacity-40 disabled:hover:bg-background disabled:hover:text-foreground")}
         onClick={() => onChange(value - 1)}
         disabled={value <= min}
-        aria-label={value - 1 < 1 ? "Remove item" : "Decrease quantity"}
+        aria-label={value - 1 < 1 ? t("removeItem") : t("decrease")}
       >
         <Minus className="size-4" />
       </button>
@@ -44,7 +46,7 @@ export function QuantityStepper({
         className={cn(btn, "flex items-center justify-center rounded-full bg-background text-foreground shadow-sm transition hover:bg-primary hover:text-primary-foreground disabled:opacity-40")}
         onClick={() => onChange(value + 1)}
         disabled={value >= max}
-        aria-label="Increase quantity"
+        aria-label={t("increase")}
       >
         <Plus className="size-4" />
       </button>

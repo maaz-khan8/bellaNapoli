@@ -2,6 +2,8 @@
 
 import { useCallback } from "react";
 import { toast } from "sonner";
+import { useTranslations } from "next-intl";
+import { useContent } from "@/hooks/use-content";
 import type { CartItem, Product } from "@/lib/types";
 import { configuredUnitPrice } from "@/lib/pricing";
 import { useCartStore } from "@/store/cart-store";
@@ -14,17 +16,20 @@ export function useAddToCart() {
   const pulseCart = useUIStore((s) => s.pulseCart);
   const setCartOpen = useUIStore((s) => s.setCartOpen);
   const crusts = useDataStore((s) => s.crusts);
+  const t = useTranslations("cart");
+  const content = useContent();
 
   const add = useCallback(
     (item: Omit<CartItem, "id">) => {
       addItem(item);
       pulseCart();
-      toast.success(`${item.quantity}× ${item.name} added`, {
-        description: [item.size?.name, item.crust?.name].filter(Boolean).join(" · ") || "Added to your order",
-        action: { label: "View cart", onClick: () => setCartOpen(true) },
+      const details = [item.size && content.sizeText(item.size.name), item.crust && content.crustName(item.crust)].filter(Boolean).join(" · ");
+      toast.success(t("added", { count: item.quantity, name: content.productName({ id: item.productId, name: item.name }) }), {
+        description: details || t("addedToOrder"),
+        action: { label: t("viewCart"), onClick: () => setCartOpen(true) },
       });
     },
-    [addItem, pulseCart, setCartOpen],
+    [addItem, pulseCart, setCartOpen, t, content],
   );
 
   /** One-tap add with sensible defaults (Medium, classic crust for pizzas). */

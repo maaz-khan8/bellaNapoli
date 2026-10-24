@@ -1,15 +1,19 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import { Check } from "lucide-react";
 import type { Order } from "@/lib/types";
-import { PROGRESS_STEPS, STATUS_META, statusLabel } from "@/lib/order-status";
-import { StatusGlyph } from "@/components/shared/status-badge";
-import { formatTime } from "@/lib/format";
+import { PROGRESS_STEPS } from "@/lib/order-status";
+import { StatusGlyph, useStatusText } from "@/components/shared/status-badge";
+import { useFormat } from "@/hooks/use-format";
 import { cn } from "@/lib/utils";
 
 /** Vertical status timeline. Terminal failures (rejected/cancelled) render as their own final step. */
 export function OrderTimeline({ order, className }: { order: Order; className?: string }) {
+  const text = useStatusText();
+  const t = useTranslations("status");
+  const f = useFormat();
   const failed = order.status === "rejected" || order.status === "cancelled";
   const reached = new Map(order.history.map((h) => [h.status, h]));
   const currentIndex = PROGRESS_STEPS.indexOf(order.status);
@@ -19,7 +23,7 @@ export function OrderTimeline({ order, className }: { order: Order; className?: 
     : PROGRESS_STEPS;
 
   return (
-    <ol className={cn("relative space-y-0", className)} aria-label="Order progress">
+    <ol className={cn("relative space-y-0", className)} aria-label={t("progress")}>
       {steps.map((status, i) => {
         const event = reached.get(status);
         const isFailedStep = failed && status === order.status;
@@ -62,17 +66,17 @@ export function OrderTimeline({ order, className }: { order: Order; className?: 
             </div>
             <div className="min-w-0 pt-1.5">
               <p className={cn("font-semibold", !event && "text-muted-foreground")}>
-                {statusLabel(status, order.fulfillment)}
-                {current && <span className="sr-only"> (current status)</span>}
+                {text.label(status, order.fulfillment)}
+                {current && <span className="sr-only"> ({t("current")})</span>}
               </p>
               <p className="text-sm text-muted-foreground">
                 {event ? (
                   <>
-                    {formatTime(event.at)}
-                    {event.note ? ` · ${event.note}` : ` · ${STATUS_META[status].description}`}
+                    {f.time(event.at)}
+                    {event.note ? ` · ${text.note(event.note)}` : ` · ${text.description(status)}`}
                   </>
                 ) : (
-                  STATUS_META[status].description
+                  text.description(status)
                 )}
               </p>
             </div>

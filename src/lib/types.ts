@@ -283,6 +283,9 @@ export interface PlatformSettings {
   commissionRate: number;
 }
 
+/** Why a promo code can't be applied — the UI turns this into translated text. */
+export type PromoError = { kind: "invalid" } | { kind: "minimum"; code: string; amount: number };
+
 export interface CartTotals {
   itemCount: number;
   subtotal: number;
@@ -290,7 +293,7 @@ export interface CartTotals {
   deliveryFee: number;
   total: number;
   promo?: Promotion;
-  promoError?: string;
+  promoError?: PromoError;
   /** Amount still needed to reach the delivery minimum (0 when met) */
   belowMinimum: number;
   /** Amount still needed for free delivery (0 when met or not applicable) */

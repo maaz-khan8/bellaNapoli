@@ -1,6 +1,9 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Ban, Bike, CheckCheck, ChefHat, CircleCheck, Clock, PackageCheck, XCircle } from "lucide-react";
 import type { FulfillmentType, OrderStatus } from "@/lib/types";
-import { STATUS_META, statusLabel } from "@/lib/order-status";
+import { STATUS_META } from "@/lib/order-status";
 import { cn } from "@/lib/utils";
 
 /** Status icon as a static component (one icon per status; "ready" depends on fulfillment). */
@@ -24,6 +27,31 @@ export function StatusGlyph({ status, fulfillment, className }: { status: OrderS
   }
 }
 
+const NOTE_KEYS: Record<string, "cancelledByCustomer" | "cancelledByRestaurant" | "kitchenFull" | "itemUnavailable" | "outsideArea" | "closingSoon"> = {
+  "Cancelled by customer": "cancelledByCustomer",
+  "Cancelled by restaurant": "cancelledByRestaurant",
+  "Kitchen at full capacity": "kitchenFull",
+  "Item unavailable": "itemUnavailable",
+  "Address outside delivery area": "outsideArea",
+  "Address outside delivery zone": "outsideArea",
+  "Restaurant closing soon": "closingSoon",
+};
+
+/** Translated status label and description ("ready" depends on delivery vs pickup). */
+export function useStatusText() {
+  const t = useTranslations("status");
+  return {
+    label: (status: OrderStatus, fulfillment?: FulfillmentType) =>
+      status === "ready" ? t(fulfillment === "pickup" ? "ready.pickup" : "ready.delivery") : t(`${status}.label` as "pending.label"),
+    description: (status: OrderStatus) => t(`${status}.description` as "pending.description"),
+    /** Known status notes (cancel/reject reasons) are stored in English — translate them when possible. */
+    note: (note: string) => {
+      const key = NOTE_KEYS[note];
+      return key ? t(`notes.${key}`) : note;
+    },
+  };
+}
+
 export function StatusBadge({
   status,
   fulfillment,
@@ -36,6 +64,7 @@ export function StatusBadge({
   pulse?: boolean;
 }) {
   const meta = STATUS_META[status];
+  const text = useStatusText();
   return (
     <span
       className={cn(
@@ -52,7 +81,7 @@ export function StatusBadge({
       ) : (
         <StatusGlyph status={status} fulfillment={fulfillment} className="size-3.5" />
       )}
-      {statusLabel(status, fulfillment)}
+      {text.label(status, fulfillment)}
     </span>
   );
 }

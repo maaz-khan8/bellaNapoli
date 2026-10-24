@@ -1,11 +1,12 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { usePathname } from "@/i18n/navigation";
+import { useFormat } from "@/hooks/use-format";
 import { AnimatePresence, motion } from "motion/react";
 import { ChevronRight, ShoppingBag } from "lucide-react";
 import { useCartTotals } from "@/hooks/use-cart-totals";
 import { useUIStore } from "@/store/ui-store";
-import { formatCurrency } from "@/lib/format";
 
 // Product pages have their own fixed purchase bar in the same spot
 const HIDDEN_ON = ["/cart", "/checkout", "/order-confirmation", "/menu/"];
@@ -15,6 +16,8 @@ export function MobileCartBar() {
   const pathname = usePathname();
   const totals = useCartTotals();
   const setCartOpen = useUIStore((s) => s.setCartOpen);
+  const t = useTranslations("cart");
+  const f = useFormat();
   const visible = totals.itemCount > 0 && !HIDDEN_ON.some((p) => pathname.startsWith(p));
 
   return (
@@ -37,8 +40,8 @@ export function MobileCartBar() {
                 {totals.itemCount}
               </span>
             </span>
-            <span className="flex-1 text-left text-sm font-semibold">View your order</span>
-            <span className="tabular font-bold">{formatCurrency(totals.total)}</span>
+            <span className="flex-1 text-left text-sm font-semibold">{t("viewOrder")}</span>
+            <span className="tabular font-bold">{f.currency(totals.total)}</span>
             <ChevronRight className="size-5 opacity-60" aria-hidden="true" />
           </button>
         </motion.div>

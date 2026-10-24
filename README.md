@@ -165,7 +165,51 @@ those actions for API calls (e.g. via TanStack Query) and replace `auth-store` w
 The UI components shouldn't need to change.
 
 **Stack:** Next.js 16 (App Router, Turbopack) · React 19 · TypeScript (strict) · Tailwind CSS v4 ·
-shadcn/ui (Radix) · Motion · Lucide · Zustand · React Hook Form + Zod · Recharts.
+shadcn/ui (Radix) · Motion · Lucide · Zustand · React Hook Form + Zod · Recharts · next-intl.
+
+## Languages (i18n)
+
+The customer website is available in **German (default), English and Turkish**, built with
+[next-intl](https://next-intl.dev). Switch languages from the dropdown at the top right of the header (also on
+the sign-in pages and in the footer).
+
+| Language | URL | Notes |
+|---|---|---|
+| Deutsch (default) | `/`, `/menu`, `/checkout` … | Always the default — browser language is not auto-detected |
+| English | `/en`, `/en/menu` … | |
+| Türkçe | `/tr`, `/tr/menu` … | |
+
+`/de/...` redirects to the clean root URL. Each language page sets `<html lang>`, a translated `<title>`
+and `hreflang` alternates, and is pre-rendered statically. Switching languages keeps you on the same page
+(including filters such as `?category=deals`) and keeps your cart and sign-in.
+
+The **Restaurant Manager and Super Admin consoles stay in English** (internal tools); they are excluded
+from locale routing.
+
+**Where things live**
+
+```
+messages/de.json, en.json, tr.json   UI text, one file per language (en.json is the type source)
+src/i18n/routing.ts                  locales, default locale, URL strategy
+src/i18n/navigation.ts               locale-aware Link / useRouter / usePathname
+src/i18n/request.ts                  loads the right messages per request
+src/proxy.ts                         locale routing (Next 16 "proxy", formerly middleware)
+src/hooks/use-format.ts              prices, numbers and dates in the active language
+src/hooks/use-content.ts             translated menu content (see below)
+```
+
+- **Type-safe keys:** `messages/en.json` types every `t("…")` call, so a missing or misspelled key fails
+  `tsc`. German and Turkish must contain exactly the same keys.
+- **Menu content** (dish names and descriptions, categories, crusts, toppings, promos, reviews) is
+  translated under the `content` section of `de.json` / `tr.json`. If the manager edits an item in the
+  dashboard, the edited text is shown as written in every language. With a real backend, this content
+  would come per language from the API instead.
+- **Validation messages** in Zod schemas are translation keys (e.g. `validation.emailInvalid`), resolved by
+  `<FormField>`.
+
+**Adding a language:** add its code to `locales` in `src/i18n/routing.ts` (plus a label in
+`LOCALE_LABELS`), copy `messages/en.json` to `messages/<code>.json` and translate it, add a `content`
+section for menu items, and add the locale tag in `src/hooks/use-format.ts`.
 
 ## Accessibility and responsiveness
 

@@ -1,0 +1,1003 @@
+{
+  "meta": {
+    "title": "Bella Napoli Pizza — Odun ateşinde pizza, kapınıza",
+    "description": "Bella Napoli'den elde açılmış, odun fırınında pişmiş Napoli pizzası sipariş edin. Teslimat ve gel-al. (Etkileşimli arayüz prototipi.)",
+    "menuTitle": "Menü",
+    "signInTitle": "Giriş yap"
+  },
+  "brand": {
+    "home": "{name} — ana sayfa",
+    "tagline": "Pizzeria · 1998'den beri"
+  },
+  "language": {
+    "label": "Dil: {language}. Dili değiştir",
+    "choose": "Dil seçin"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "menu": "Menü",
+    "deals": "Fırsatlar",
+    "story": "Hikâyemiz",
+    "visit": "Ziyaret",
+    "signedOut": "Çıkış yapıldı",
+    "signedOutBody": "Yine bekleriz!",
+    "openMenu": "Gezinme menüsünü aç",
+    "closeMenu": "Menüyü kapat",
+    "navigation": "Gezinme",
+    "navigationDescription": "Site gezinmesi ve hesap bağlantıları",
+    "mobileNav": "Mobil",
+    "mainNav": "Ana menü",
+    "myAccount": "Hesabım",
+    "myOrders": "Siparişlerim",
+    "addresses": "Adresler",
+    "signOut": "Çıkış yap",
+    "signIn": "Giriş yap",
+    "signInOrRegister": "Giriş yap veya kaydol",
+    "managerPortal": "Yönetici paneli",
+    "superAdmin": "Süper Admin",
+    "accountMenu": "Hesap menüsü",
+    "cart": "Sepet",
+    "openCart": "Sepeti aç, {count} ürün",
+    "skip": "İçeriğe geç"
+  },
+  "banner": {
+    "promo": "40 $ üzeri ücretsiz teslimat · <code>WELCOME10</code> ile %10 indirim"
+  },
+  "ordering": {
+    "unavailable": "{name} şu anda geçici olarak online sipariş almıyor.",
+    "paused": "Mutfak şu anda online sipariş almıyor. Lütfen daha sonra tekrar deneyin."
+  },
+  "footer": {
+    "about": "{tagline}. Elde açılmış hamur, San Marzano domatesleri ve 485 °C'lik odun fırını.",
+    "menu": "Menü",
+    "account": "Hesabınız",
+    "signIn": "Giriş yap",
+    "createAccount": "Hesap oluştur",
+    "trackOrder": "Sipariş takibi",
+    "cart": "Sepetiniz",
+    "visit": "Bizi ziyaret edin",
+    "openDaily": "Her gün açık · saatler yukarıda",
+    "copyright": "© {from}–2026 {name}. Etkileşimli arayüz prototipi — tüm siparişler, hesaplar ve ödemeler simülasyondur.",
+    "managerPortal": "Restoran Yöneticisi",
+    "superAdmin": "Süper Admin"
+  },
+  "common": {
+    "loading": "Yükleniyor",
+    "cancel": "İptal",
+    "confirm": "Onayla",
+    "close": "Kapat",
+    "hidePassword": "Şifreyi gizle",
+    "showPassword": "Şifreyi göster",
+    "quantity": "Adet",
+    "removeItem": "Ürünü kaldır",
+    "decrease": "Adedi azalt",
+    "increase": "Adedi artır",
+    "checkingSession": "Oturumunuz kontrol ediliyor"
+  },
+  "demo": {
+    "reset": "Demo verilerini sıfırla",
+    "confirmTitle": "Tüm demo verileri sıfırlansın mı?",
+    "confirmBody": "Orijinal menü, restoran profili, müşteriler ve sipariş geçmişi geri yüklenir; sepet boşaltılır ve demo kayıtları silinir. Yerleşik demo girişleri açık kalır.",
+    "confirm": "Demoyu sıfırla",
+    "done": "Demo verileri geri yüklendi",
+    "doneBody": "Her şey orijinal haline döndü."
+  },
+  "status": {
+    "progress": "Sipariş durumu",
+    "current": "mevcut durum",
+    "pending": {
+      "label": "Beklemede",
+      "description": "Restoranın onayı bekleniyor"
+    },
+    "accepted": {
+      "label": "Onaylandı",
+      "description": "Mutfak siparişinizi onayladı"
+    },
+    "preparing": {
+      "label": "Hazırlanıyor",
+      "description": "Pizzanız odun fırınında"
+    },
+    "ready": {
+      "delivery": "Yolda",
+      "pickup": "Teslim almaya hazır",
+      "description": "Paketlendi ve hazır"
+    },
+    "completed": {
+      "label": "Tamamlandı",
+      "description": "Afiyet olsun — buon appetito!"
+    },
+    "rejected": {
+      "label": "Reddedildi",
+      "description": "Restoran bu siparişi kabul edemedi"
+    },
+    "cancelled": {
+      "label": "İptal edildi",
+      "description": "Bu sipariş iptal edildi"
+    },
+    "notes": {
+      "cancelledByCustomer": "Müşteri tarafından iptal edildi",
+      "cancelledByRestaurant": "Restoran tarafından iptal edildi",
+      "kitchenFull": "Mutfak tam kapasitede",
+      "itemUnavailable": "Ürün mevcut değil",
+      "outsideArea": "Adres teslimat bölgesi dışında",
+      "closingSoon": "Restoran yakında kapanıyor"
+    }
+  },
+  "totals": {
+    "subtotal": "Ara toplam",
+    "subtotalItems": "Ara toplam ({count} ürün)",
+    "discount": "İndirim",
+    "deliveryFee": "Teslimat ücreti",
+    "pickup": "Gel-al",
+    "free": "Ücretsiz",
+    "total": "Toplam",
+    "promoInvalid": "Bu promosyon kodu geçerli değil.",
+    "promoMinimum": "{code} kodunu kullanmak için {amount} daha ekleyin."
+  },
+  "cart": {
+    "added": "{count}× {name} eklendi",
+    "addedToOrder": "Siparişinize eklendi",
+    "viewCart": "Sepeti görüntüle",
+    "reordered": "{number} numaralı siparişten {count} ürün eklendi",
+    "unavailableToday": "Bugün mevcut değil: {items}",
+    "todaysPrices": "Fiyatlar bugünkü menüye göredir.",
+    "nothingAvailable": "Bu siparişteki ürünlerin hiçbiri şu anda mevcut değil.",
+    "unavailable": "Bu ürün şu anda mevcut değil — ödemeye geçmek için lütfen kaldırın.",
+    "quantityFor": "{name} adedi",
+    "remove": "{name} ürününü kaldır",
+    "removeShort": "Kaldır",
+    "freeDeliveryUnlocked": "Ücretsiz teslimatı kazandınız!",
+    "freeDeliveryProgress": "Ücretsiz teslimat için <strong>{amount}</strong> daha ekleyin",
+    "freeDeliveryLabel": "Ücretsiz teslimata kalan",
+    "removePromo": "Promosyon kodunu kaldır",
+    "promoCode": "Promosyon kodu",
+    "promoPlaceholder": "Promosyon kodu (WELCOME10 deneyin)",
+    "apply": "Uygula",
+    "drawerTitle": "Siparişiniz",
+    "drawerCount": "Bella Napoli'den {count} ürün",
+    "drawerEmpty": "Henüz bir şey yok",
+    "emptyTitle": "Sepetiniz boş",
+    "emptyDrawer": "Odun fırınımız sıcak ve hazır. Başlamak için bir pizza ekleyin.",
+    "emptyPage": "Henüz bir şey eklemediniz. Fırınlarımız yanıyor ve hazır.",
+    "browseMenu": "Menüye göz atın",
+    "checkout": "Ödeme",
+    "viewOrder": "Siparişinizi görüntüleyin",
+    "loading": "Sepetiniz yükleniyor",
+    "title": "Sepetiniz",
+    "subtitle": "{count} ürün · siz hazır olduğunuzda",
+    "clear": "Sepeti boşalt",
+    "itemsLabel": "Sepetteki ürünler",
+    "continueShopping": "Alışverişe devam et",
+    "summary": "Sipariş özeti",
+    "minimum": "Teslimat siparişleri için en az {minimum} gerekir. {amount} daha ekleyin veya gel-al seçin.",
+    "proceed": "Ödemeye geç",
+    "signInNote": "Siparişi vermeden önce giriş yapacaksınız — sepetiniz kaydedilir."
+  },
+  "fulfillment": {
+    "label": "Teslimat veya gel-al",
+    "delivery": "Teslimat",
+    "pickup": "Gel-al",
+    "eta": "~{minutes} dk",
+    "unavailable": "Mevcut değil"
+  },
+  "tags": {
+    "veg": "Vejetaryen",
+    "spicy": "Acılı",
+    "new": "Yeni",
+    "chef": "Şefin seçimi"
+  },
+  "product": {
+    "bestseller": "Çok satan",
+    "rated": "5 üzerinden {rating} puan",
+    "new": "Yeni",
+    "soldOut": "Bugün tükendi",
+    "from": "Başlangıç",
+    "add": "Ekle",
+    "customize": "{name} özelleştir",
+    "quickAddPizza": "{name} sepete ekle (Orta, klasik hamur)",
+    "quickAdd": "{name} sepete ekle",
+    "soldOutAria": "{name} tükendi",
+    "notFound": "Bu ürünü bulamadık",
+    "notFoundBody": "Menüden kaldırılmış olabilir. Bugün fırından taze çıkanlara göz atın.",
+    "backToMenu": "Menüye dön",
+    "related": "Bunları da beğenebilirsiniz"
+  },
+  "menu": {
+    "eyebrow": "Bella Napoli menüsü",
+    "title": "<em>Mükemmel</em> pizzanızı seçin",
+    "intro": "Odun fırınında pizzalar, yan ürünler, tatlılar ve fırsatlar. Her pizzayı — boyut, hamur ve malzemeler — kendi sayfasında özelleştirin.",
+    "searchLabel": "Menüde ara",
+    "searchPlaceholder": "Pizza, malzeme, yan ürün ara…",
+    "clearSearch": "Aramayı temizle",
+    "categories": "Menü kategorileri",
+    "all": "Tümü",
+    "availableNow": "Şu an mevcut",
+    "sortLabel": "Ürünleri sırala",
+    "sort": {
+      "popular": "En popüler",
+      "rating": "En yüksek puan",
+      "price-asc": "Fiyat: düşükten yükseğe",
+      "price-desc": "Fiyat: yüksekten düşüğe",
+      "name": "İsim A–Z"
+    },
+    "results": "<strong>{count}</strong> ürün gösteriliyor",
+    "resultsFor": "“{query}” için <strong>{count}</strong> ürün gösteriliyor",
+    "emptyTitle": "Menüde eşleşme yok",
+    "emptyBody": "Farklı bir arama deneyin veya filtreleri temizleyin — pizza ustamızın sunacağı daha çok şey var.",
+    "clearFilters": "Filtreleri temizle",
+    "viewOnly": "Sadece bunları göster"
+  },
+  "customizer": {
+    "breadcrumb": "Gezinme yolu",
+    "home": "Ana Sayfa",
+    "menu": "Menü",
+    "soldOutToday": "Bugün tükendi",
+    "bestseller": "Çok satan",
+    "reviews": "{formatted} yorum",
+    "newOnMenu": "Menüde yeni",
+    "calories": "{kcal} kcal",
+    "caloriesMedium": "{kcal} kcal (orta)",
+    "size": "Boyutunuzu seçin",
+    "crust": "Hamurunuzu seçin",
+    "toppings": "Ekstra malzemeler",
+    "toppingsHint": "{count}/{max} seçildi · isteğe bağlı",
+    "addons": "Ekstralar",
+    "notes": "Özel istekler",
+    "notesPlaceholder": "ör. iyi pişmiş, az sos, kare dilimlenmiş…",
+    "required": "Zorunlu",
+    "optional": "İsteğe bağlı",
+    "included": "Dahil",
+    "out": "Yok",
+    "allergies": "Alerjiniz mi var? Lütfen ayrıca {phone} numarasından bizi arayın.",
+    "quantityOf": "{name} adedi",
+    "addLong": "Sepete ekle",
+    "addAria": "Sepete ekle, {total}",
+    "soldOut": "Tükendi",
+    "soldOutAria": "{name} tükendi",
+    "breakdown": {
+      "base": "{amount} temel fiyat",
+      "crust": "{amount} hamur",
+      "toppings": "{amount} malzemeler",
+      "addons": "{amount} ekstralar"
+    }
+  },
+  "hero": {
+    "label": "Öne çıkan pizzalar",
+    "slideOf": "{n} / {total}",
+    "chooseSlide": "Slayt seçin",
+    "slideLabel": "Slayt {n}: {title}",
+    "pause": "Slayt gösterisini duraklat",
+    "play": "Slayt gösterisini oynat",
+    "previous": "Önceki slayt",
+    "next": "Sonraki slayt",
+    "rating": "Misafir puanı",
+    "delivery": "Teslimat",
+    "oven": "Fırın sıcaklığı",
+    "minutes": "{minutes} dk",
+    "featuredPizza": "Öne çıkan pizza",
+    "from": "Başlangıç",
+    "only": "Sadece",
+    "hotFresh": "{minutes} dk'da sıcacık",
+    "slides": {
+      "s1": {
+        "eyebrow": "Otantik Napoli · 1998'den beri",
+        "title1": "485 °C'de pişer.",
+        "title2": "Sadece",
+        "title3": "90 saniyede hazır.",
+        "body": "48 saatlik hamur, San Marzano domatesleri ve fior di latte — el yapımı odun fırınımızda pişip kapınıza hâlâ çıtır çıtır gelir.",
+        "primary": "Hemen sipariş ver",
+        "secondary": "Margherita'nı oluştur"
+      },
+      "s2": {
+        "eyebrow": "Yeni imza pizza",
+        "title1": "Tatlı acı:",
+        "title2": "'Nduja &",
+        "title3": "Acılı Bal.",
+        "body": "Sürülebilir Kalabriya 'nduja'sı, çıtır pepperoni ve Kalamata zeytinleri, üzerine ağır ağır gezdirilmiş acı biberli bal.",
+        "primary": "Bu akşam deneyin",
+        "secondary": "İmza pizzalar"
+      },
+      "s3": {
+        "eyebrow": "Hafta sonu aile fırsatı",
+        "title1": "İki büyük pizza.",
+        "title2": "Mutlu bir",
+        "title3": "sofra.",
+        "body": "Aile Ziyafeti: seçeceğiniz iki büyük klasik pizza, sarımsaklı tereyağlı pide ve iki Sicilya limonatası. Her hafta sonu 12 $'dan fazla tasarruf edin.",
+        "primary": "Fırsatı yakala",
+        "secondary": "Tüm fırsatlar"
+      }
+    }
+  },
+  "home": {
+    "trust": {
+      "label": "Neden Bella Napoli",
+      "dough": {
+        "title": "48 saatlik hamur",
+        "body": "Her gün yavaş mayalanır"
+      },
+      "tomatoes": {
+        "title": "San Marzano DOP",
+        "body": "Campania'dan ithal"
+      },
+      "oven": {
+        "title": "Odun fırınında",
+        "body": "485 °C'de 90 saniye"
+      },
+      "delivery": {
+        "title": "Sıcacık teslimat",
+        "body": "Isı yalıtımlı, takipli çantalar"
+      }
+    },
+    "categories": {
+      "eyebrow": "Menüyü keşfedin",
+      "title": "<em>Her</em> isteğe uygun bir şey",
+      "fullMenu": "Tüm menü",
+      "count": "{count} ürün"
+    },
+    "featured": {
+      "eyebrow": "Bu haftanın öne çıkanları",
+      "title": "Doğrudan <em>odun fırınından</em>",
+      "description": "Pizza ustamız Giuseppe'nin seçimleri. Boyut, hamur ve malzeme seçmek için bir pizzaya dokunun."
+    },
+    "promos": {
+      "label": "Özel teklifler",
+      "feast": {
+        "badge": "Hafta sonu fırsatı",
+        "title": "Aile Ziyafeti",
+        "body": "2 büyük pizza, sarımsaklı pide ve 2 limonata.",
+        "cta": "Ziyafeti sipariş et"
+      },
+      "code": {
+        "badge": "Promosyon kodu",
+        "fallback": "Büyük siparişlerde %20 indirim"
+      },
+      "welcome": {
+        "badge": "İlk siparişiniz mi?",
+        "title": "WELCOME10 ile %10 indirim",
+        "cta": "Hesabınızı oluşturun"
+      }
+    },
+    "bestsellers": {
+      "eyebrow": "En çok sipariş edilenler",
+      "title": "Mahallenin <em>favorileri</em>",
+      "scrollLeft": "Favorileri sola kaydır",
+      "scrollRight": "Favorileri sağa kaydır"
+    },
+    "about": {
+      "eyebrow": "Hikâyemiz",
+      "title": "Manhattan'da küçük bir <em>Napoli</em> parçası",
+      "ovenAlt": "Bella Napoli'nin odun fırınında pişen bir pizza",
+      "roomAlt": "Bella Napoli'nin salonu",
+      "years": "yıldır Mulberry St.'te",
+      "quote": "İyi bir pizzanın dört şeye ihtiyacı vardır: un, su, zaman — ve ateş. Gerisi sevgidir.",
+      "quoteBy": "Giuseppe Esposito, kurucu ve pizza ustası",
+      "stats": {
+        "pizzasValue": "1,2 Mn+",
+        "pizzas": "pişirilen pizza",
+        "reviews": "{count} yorum",
+        "fresh": "her gün taze"
+      }
+    },
+    "how": {
+      "eyebrow": "Kolay sipariş",
+      "title": "Fırınımızdan sofranıza",
+      "customise": {
+        "title": "Özelleştirin",
+        "body": "Boyutu, hamuru ve malzemeleri seçin — fiyat anında güncellenir."
+      },
+      "checkout": {
+        "title": "Sipariş verin",
+        "body": "Giriş yapın, teslimat veya gel-al seçin, kapıda nakit ödeyin."
+      },
+      "track": {
+        "title": "Canlı takip",
+        "body": "Siparişinizi fırından kapınıza kadar gerçek zamanlı takip edin."
+      }
+    },
+    "reviews": {
+      "eyebrow": "Mahallenin sevgilisi",
+      "title": "{count} misafirden {rating} yıldız",
+      "stars": "5 üzerinden {rating} yıldız"
+    },
+    "visit": {
+      "eyebrow": "Ziyaret ve teslimat",
+      "title": "Uğrayın, <em>ciao</em> deyin",
+      "hours": "Çalışma saatleri",
+      "today": "bugün",
+      "closed": "Kapalı",
+      "midnight": "Gece yarısı",
+      "delivery": "Teslimat",
+      "deliveryRadius": "Mulberry St'e {km} km mesafede · ~{minutes} dk",
+      "deliveryFee": "{fee} ücret · {threshold} üzeri ücretsiz",
+      "deliveryMinimum": "Minimum sipariş {amount}",
+      "deliveryPaused": "Teslimat şu anda durduruldu — gel-al mevcut.",
+      "pickup": "Gel-al",
+      "pickupBody": "Yaklaşık {minutes} dakikada hazır. Gel-al tezgâhımızda sıra beklemeyin.",
+      "pickupOff": "Gel-al şu anda mevcut değil.",
+      "findUs": "Bizi bulun",
+      "startOrder": "Siparişe başla"
+    },
+    "cta": {
+      "label": "Hemen sipariş ver",
+      "title": "Acıktınız mı? Pizzanız <em>{minutes} dakika</em> uzaklıkta.",
+      "body": "Hesap olmadan göz atın — sipariş vermeye hazır olduğunuzda giriş yapın.",
+      "order": "Hemen sipariş ver",
+      "register": "Hesap oluştur"
+    }
+  },
+  "days": {
+    "monday": "Pazartesi",
+    "tuesday": "Salı",
+    "wednesday": "Çarşamba",
+    "thursday": "Perşembe",
+    "friday": "Cuma",
+    "saturday": "Cumartesi",
+    "sunday": "Pazar"
+  },
+  "validation": {
+    "nameRequired": "Lütfen adınızı ve soyadınızı girin",
+    "emailRequired": "E-posta zorunludur",
+    "emailInvalid": "Geçerli bir e-posta adresi girin",
+    "phoneRequired": "Telefon numarası zorunludur",
+    "phoneInvalid": "Geçerli bir telefon numarası girin, ör. (212) 555-0123",
+    "passwordRequired": "Şifre zorunludur",
+    "passwordLength": "En az 8 karakter kullanın",
+    "passwordUppercase": "En az bir büyük harf kullanın",
+    "passwordNumber": "En az bir rakam kullanın",
+    "confirmRequired": "Lütfen şifrenizi onaylayın",
+    "passwordMismatch": "Şifreler eşleşmiyor",
+    "termsRequired": "Devam etmek için lütfen demo koşullarını kabul edin",
+    "labelRequired": "Adrese bir ad verin, ör. Ev",
+    "streetRequired": "Sokak adresini girin",
+    "cityRequired": "Şehir girin",
+    "zipInvalid": "5 haneli posta kodu girin",
+    "notesTooLong": "Notlar en fazla 120 karakter olmalıdır",
+    "instructionsTooLong": "Talimatlar en fazla 200 karakter olmalıdır",
+    "paymentRequired": "Lütfen bir ödeme yöntemi seçin"
+  },
+  "checkout": {
+    "title": "Ödeme",
+    "signedInAs": "<strong>{email}</strong> olarak giriş yapıldı",
+    "editCart": "Sepeti düzenle",
+    "emptyTitle": "Henüz ödenecek bir şey yok",
+    "emptyBody": "Sepetiniz boş. Bir iki pizza ekleyip buraya geri dönün.",
+    "browseMenu": "Menüye göz atın",
+    "steps": {
+      "contact": "İletişim bilgileri",
+      "fulfillment": "Teslimat veya gel-al",
+      "payment": "Ödeme",
+      "review": "Siparişinizi kontrol edin"
+    },
+    "fields": {
+      "name": "Ad soyad",
+      "phone": "Telefon numarası",
+      "phoneHint": "Gerekirse kurye sizi arar",
+      "email": "E-posta",
+      "emailHint": "Demo makbuzunuz için",
+      "street": "Sokak adresi",
+      "streetPlaceholder": "214 Spring Street, Daire 3",
+      "city": "Şehir",
+      "zip": "Posta kodu",
+      "instructions": "Teslimat talimatları",
+      "instructionsPlaceholder": "Kapı kodu, kat, kapıya bırakın…",
+      "kitchenNotes": "Mutfak için notlar",
+      "kitchenNotesPlaceholder": "Bilmemiz gereken bir şey var mı?"
+    },
+    "deliveryAddress": "Teslimat adresi",
+    "default": "Varsayılan",
+    "newAddress": "Yeni adres kullan",
+    "saveAddress": "Bu adresi hesabıma kaydet",
+    "addressHome": "Ev",
+    "addressOther": "Diğer",
+    "pickupAt": "{name} şubesinden teslim alın",
+    "readyIn": "~{minutes} dk'da hazır",
+    "paymentMethod": "Ödeme yöntemi",
+    "cod": "Kapıda nakit ödeme",
+    "codDelivery": "Siparişiniz geldiğinde kuryeye ödeyin",
+    "codPickup": "Teslim alırken kasada ödeyin",
+    "card": "Kredi veya banka kartı",
+    "wallet": "Apple Pay / Google Pay",
+    "comingSoon": "Yakında",
+    "summary": "Sipariş özeti",
+    "placing": "Siparişiniz veriliyor…",
+    "place": "Sipariş ver · {total}",
+    "demoNote": "Demo işlem — ödeme alınmaz ve yemek teslim edilmez.",
+    "cantPlace": "Bu sipariş henüz verilemiyor",
+    "checkDetails": "Lütfen bilgilerinizi kontrol edin",
+    "checkDetailsBody": "Bazı zorunlu alanların kontrol edilmesi gerekiyor.",
+    "blockers": {
+      "unavailable": "Mevcut olmayan ürünleri kaldırın: {items}.",
+      "minimum": "Teslimat için en az {minimum} gerekir — {amount} daha ekleyin veya gel-al seçin.",
+      "noDelivery": "Teslimat şu anda mevcut değil — lütfen gel-al seçin.",
+      "noPickup": "Gel-al şu anda mevcut değil — lütfen teslimat seçin."
+    }
+  },
+  "confirmation": {
+    "notFound": "Sipariş bulunamadı",
+    "notFoundBody": "Bu siparişi hesabınızda bulamadık.",
+    "viewOrders": "Siparişlerimi görüntüle",
+    "demo": "Demo işlem",
+    "title": "Grazie, {name}! Siparişiniz alındı.",
+    "sent": "<strong>{number}</strong> numaralı sipariş saat {time}'da {name} mutfağına gönderildi.",
+    "etaArrival": "Tahmini varış",
+    "etaReady": "Tahmini hazır olma",
+    "about": "yaklaşık {minutes} dakika",
+    "delivery": "Teslimat",
+    "pickup": "Gel-al",
+    "status": "Mevcut durum",
+    "live": "Mutfak çalıştıkça canlı güncellenir",
+    "items": "Ürünleriniz",
+    "details": "Detaylar",
+    "cod": "Kapıda nakit ödeme",
+    "placed": "Sipariş tarihi: {date}",
+    "track": "Siparişi takip et",
+    "continue": "Alışverişe devam et"
+  },
+  "tracking": {
+    "updated": "Sipariş {number}: {status}",
+    "notFound": "Sipariş bulunamadı",
+    "notFoundBody": "Bu sipariş mevcut değil veya başka bir hesaba ait.",
+    "myOrders": "Siparişlerim",
+    "allOrders": "Tüm siparişler",
+    "order": "Sipariş {number}",
+    "etaArrival": "Tahmini varış",
+    "etaReady": "Tahmini hazır olma",
+    "progress": "Sipariş durumu",
+    "liveSync": "Canlı demo senkronizasyonu — Restoran Yöneticisi panelindeki durum değişiklikleri burada otomatik olarak görünür.",
+    "timeline": "Sipariş geçmişi",
+    "summary": "Özet",
+    "detailsLabel": "Teslimat detayları",
+    "pickupAt": "Teslim alma adresi: {address}",
+    "cod": "Kapıda nakit ödeme",
+    "questions": "Sorunuz mu var? {phone} numarasını arayın",
+    "cancel": "Siparişi iptal et",
+    "cancelTitle": "{number} numaralı sipariş iptal edilsin mi?",
+    "cancelBody": "Restoran siparişinizi onaylamadan önce iptal edebilirsiniz. Bu işlem geri alınamaz.",
+    "cancelled": "Sipariş iptal edildi",
+    "orderAgain": "Tekrar sipariş ver"
+  },
+  "orders": {
+    "order": "Sipariş {number}",
+    "delivery": "Teslimat",
+    "pickup": "Gel-al",
+    "items": "{count} ürün",
+    "reorder": "Tekrar sipariş ver",
+    "track": "Takip et",
+    "details": "Detaylar"
+  },
+  "account": {
+    "greeting": "Ciao, {name}!",
+    "memberSince": "{date} tarihinden beri üye",
+    "navLabel": "Hesap",
+    "tabs": {
+      "profile": "Profil",
+      "orders": "Siparişler",
+      "addresses": "Adresler"
+    },
+    "signedOut": "Çıkış yapıldı",
+    "signOut": "Çıkış yap",
+    "stats": {
+      "orders": "Verilen sipariş",
+      "spent": "Toplam harcama",
+      "since": "Üyelik tarihi"
+    },
+    "active": "Aktif {count, plural, one {sipariş} other {siparişler}}",
+    "personal": "Kişisel bilgiler",
+    "personalHint": "Ödeme formunu önceden doldurmak için kullanılır. Değişiklikler bu tarayıcıya kaydedilir.",
+    "updated": "Profil güncellendi",
+    "recent": "Son siparişler",
+    "viewAll": "Tümünü gör",
+    "noOrders": "Henüz sipariş yok — <link>ilk pizzanızı sipariş edin</link>.",
+    "profile": {
+      "name": "Ad soyad",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "save": "Değişiklikleri kaydet"
+    },
+    "history": {
+      "title": "Sipariş geçmişi",
+      "subtitle": "Aktif siparişleri takip edin ve favorilerinizi tekrar sipariş edin.",
+      "all": "Tümü ({count})",
+      "active": "Aktif ({count})",
+      "past": "Geçmiş",
+      "noActive": "Aktif sipariş yok",
+      "none": "Henüz sipariş yok",
+      "noneBody": "Sipariş verdiğinizde burada canlı takiple görünecek.",
+      "orderNow": "Hemen sipariş ver"
+    }
+  },
+  "addresses": {
+    "title": "Kayıtlı adresler",
+    "subtitle": "Daha hızlı sipariş için ödeme sırasında birini seçin.",
+    "add": "Adres ekle",
+    "emptyTitle": "Kayıtlı adres yok",
+    "emptyBody": "Saniyeler içinde sipariş vermek için ev veya iş adresinizi ekleyin.",
+    "default": "Varsayılan",
+    "edit": "Düzenle",
+    "makeDefault": "Varsayılan yap",
+    "defaultSet": "{label} artık varsayılan adresiniz",
+    "delete": "Sil",
+    "deleteTitle": "“{label}” silinsin mi?",
+    "deleteBody": "Bu adres hesabınızdan kaldırılacak.",
+    "deleted": "Adres silindi",
+    "addTitle": "Yeni adres ekle",
+    "editTitle": "Adresi düzenle",
+    "dialogNote": "Demo adresler yalnızca bu tarayıcıda saklanır.",
+    "added": "Adres eklendi",
+    "updated": "Adres güncellendi",
+    "cancel": "İptal",
+    "save": "Adresi kaydet",
+    "fields": {
+      "label": "Adres adı",
+      "labelPlaceholder": "Ev, İş, Annemin evi…",
+      "street": "Sokak adresi",
+      "line2": "Daire, kat (isteğe bağlı)",
+      "city": "Şehir",
+      "zip": "Posta kodu",
+      "notes": "Teslimat notları (isteğe bağlı)",
+      "notesPlaceholder": "Zil, kapı kodu…",
+      "default": "Varsayılan teslimat adresi yap"
+    }
+  },
+  "auth": {
+    "roles": {
+      "customer": "müşteri",
+      "manager": "Restoran Yöneticisi",
+      "admin": "Süper Admin"
+    },
+    "demo": {
+      "title": {
+        "customer": "Demo müşteri hesabı",
+        "manager": "Demo restoran yöneticisi hesabı",
+        "admin": "Demo platform süper admin hesabı"
+      },
+      "email": "E-posta",
+      "password": "Şifre",
+      "use": "Kullan"
+    },
+    "layout": {
+      "back": "Siteye dön",
+      "note": "Etkileşimli prototip · hesaplar yalnızca bu tarayıcıda saklanır",
+      "stars": "5 üzerinden 5 yıldız",
+      "quote": "Hamuru inanılmaz — çıtır, yumuşak ve hafif. Sipariş vermek otuz saniye sürüyor.",
+      "quoteBy": "Marcus T., SoHo · 2.847 beş yıldızlı yorumdan biri"
+    },
+    "loginPage": {
+      "title": "Tekrar hoş geldiniz",
+      "subtitle": "Sipariş vermek, teslimatları takip etmek ve favorilerinizi tekrar sipariş etmek için giriş yapın.",
+      "new": "Bella Napoli'de yeni misiniz?",
+      "create": "Hesap oluşturun"
+    },
+    "login": {
+      "email": "E-posta adresi",
+      "emailPlaceholder": "siz@ornek.com",
+      "password": "Şifre",
+      "remember": "Beni hatırla",
+      "forgot": "Şifremi unuttum",
+      "forgotPreview": "Şifre sıfırlama bir önizleme özelliğidir",
+      "forgotPreviewBody": "Gerçek sürümde güvenli bir sıfırlama bağlantısı e-postayla gönderilir.",
+      "submit": "Giriş yap",
+      "signingIn": "Giriş yapılıyor…",
+      "welcomeBack": "Tekrar hoş geldiniz, {name}!",
+      "cartSavedToast": "Sepetiniz kaydedildi — siparişinizi tamamlayalım.",
+      "checkoutGate": "<strong>Sipariş vermek için giriş yapın.</strong> Sepetiniz{count, plural, =0 {} other { ({count} ürün)}} kaydedildi ve doğrudan ödemeye geri döneceksiniz.",
+      "denied": "<strong>{current}</strong> olarak giriş yaptınız; bu hesap o sayfayı açamaz. Devam etmek için bir {required} hesabıyla giriş yapın.",
+      "continueToPage": "Bu sayfaya devam etmek için lütfen giriş yapın.",
+      "goToPortal": "{portal} girişine git",
+      "errors": {
+        "invalidCredentials": "E-posta veya şifre hatalı. Aşağıdaki demo bilgilerini kontrol edin.",
+        "wrongPortal": "Bu hesabın burada erişimi yok. Lütfen {portal} paneli üzerinden giriş yapın.",
+        "profileMissing": "Bu müşteri profilini bulamadık. Demo verilerini sıfırlamayı deneyin.",
+        "deactivated": "Bu hesap platform tarafından devre dışı bırakıldı. Yardım için destekle iletişime geçin.",
+        "emailTaken": "Bu e-postayla zaten bir hesap var. Bunun yerine giriş yapmayı deneyin."
+      }
+    },
+    "register": {
+      "title": "Hesabınızı oluşturun",
+      "subtitle": "Adreslerinizi kaydedin, siparişleri canlı takip edin ve tek dokunuşla tekrar sipariş verin.",
+      "perk": "Yeni üyeler WELCOME10 koduyla <strong>%10 indirim</strong> kazanır.",
+      "name": "Ad soyad",
+      "namePlaceholder": "Sophia Romano",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "password": "Şifre",
+      "passwordHint": "En az 8 karakter, bir büyük harf ve bir rakam",
+      "strength": "Şifre gücü: <strong>{level}</strong>",
+      "strengthLevels": {
+        "tooShort": "Çok kısa",
+        "weak": "Zayıf",
+        "fair": "Orta",
+        "good": "İyi",
+        "strong": "Güçlü"
+      },
+      "confirm": "Şifreyi onayla",
+      "terms": "Bunun yalnızca bu tarayıcıda saklanan bir demo hesap olduğunu anlıyor ve prototip koşullarını kabul ediyorum.",
+      "submit": "Hesap oluştur",
+      "creating": "Hesap oluşturuluyor…",
+      "welcome": "Bella Napoli'ye hoş geldiniz, {name}!",
+      "welcomeBody": "Ödemede WELCOME10 ile %10 indirim kazanın.",
+      "already": "Zaten hesabınız var mı?",
+      "signIn": "Giriş yap"
+    },
+    "forgot": {
+      "title": "Şifrenizi mi unuttunuz?",
+      "subtitle": "Kayıt olduğunuz e-postayı girin, size bir sıfırlama bağlantısı gönderelim.",
+      "email": "E-posta adresi",
+      "submit": "Sıfırlama bağlantısı gönder",
+      "sending": "Gönderiliyor…",
+      "sentTitle": "Gelen kutunuzu kontrol edin",
+      "sentBody": "<strong>{email}</strong> için bir hesap varsa sıfırlama bağlantısı gönderilir.",
+      "demoNote": "Demo modu: gerçekte e-posta gönderilmez. Giriş yapmak için demo şifresini <code>Demo123!</code> kullanın.",
+      "back": "Girişe dön"
+    }
+  },
+  "errors": {
+    "title": "Bir şeyler ters gitti",
+    "body": "Prototipte beklenmeyen bir hata oluştu. Tekrar deneyin — devam ederse demo verilerini sıfırlamak genellikle sorunu çözer.",
+    "retry": "Tekrar dene",
+    "reset": "Demo verilerini sıfırla"
+  },
+  "notFound": {
+    "title": "Bu dilim kayıp",
+    "body": "Aradığınız sayfa mevcut değil veya taşınmış. Sizi lezzetli bir şeye geri götürelim.",
+    "home": "Ana sayfaya dön",
+    "menu": "Menüyü gör"
+  },
+  "content": {
+    "restaurant": {
+      "tagline": "1998'den beri elde yapılan, odun fırınında Napoli pizzası",
+      "description": "Bella Napoli, Napoli'nin ruhunu mahalleye taşıyan bir aile pizzacısıdır. Hamurumuz 48 saat dinlenir, domateslerimiz Vezüv Yanardağı'nın yamaçlarında yetişir ve her pizza elle örülmüş 485 °C'lik odun fırınında doksan saniye pişer."
+    },
+    "sizes": {
+      "Small": "Küçük",
+      "Medium": "Orta",
+      "Large": "Büyük",
+      "Family": "Aile"
+    },
+    "categories": {
+      "cat_classic": {
+        "name": "Klasik Pizzalar",
+        "description": "Zamansız Napoli favorileri"
+      },
+      "cat_signature": {
+        "name": "İmza Pizzalar",
+        "description": "Şeflerimizin özel tarifleri"
+      },
+      "cat_premium": {
+        "name": "Premium Pizzalar",
+        "description": "Trüf, burrata ve Parma jambonu"
+      },
+      "cat_veg": {
+        "name": "Vejetaryen Pizzalar",
+        "description": "Bahçe tazeliğinde, etsiz"
+      },
+      "cat_sides": {
+        "name": "Yan Ürünler",
+        "description": "Pide, kanat ve patates kızartması"
+      },
+      "cat_drinks": {
+        "name": "İçecekler",
+        "description": "Limonata ve köpüklü içecekler"
+      },
+      "cat_desserts": {
+        "name": "Tatlılar",
+        "description": "Tiramisu, gelato ve daha fazlası"
+      },
+      "cat_deals": {
+        "name": "Özel Fırsatlar",
+        "description": "Daha çok tasarruf ettiren menüler"
+      }
+    },
+    "crusts": {
+      "crust_classic": {
+        "name": "Klasik Elde Açılmış",
+        "description": "Yumuşak, havadar, 48 saatlik hamur"
+      },
+      "crust_thin": {
+        "name": "İnce & Çıtır",
+        "description": "Roma usulü, ekstra çıtır"
+      },
+      "crust_napoli": {
+        "name": "Odun Fırınında Napoli Usulü",
+        "description": "Benekli, kabarık kenar"
+      },
+      "crust_stuffed": {
+        "name": "Peynir Dolgulu Kenar",
+        "description": "Mozzarella dolgulu kenar"
+      },
+      "crust_gf": {
+        "name": "Glutensiz",
+        "description": "Karnabahar ve pirinç unu"
+      }
+    },
+    "toppings": {
+      "top_mozz": "Ekstra Mozzarella",
+      "top_pepperoni": "Pepperoni",
+      "top_sausage": "İtalyan Sosisi",
+      "top_prosciutto": "Prosciutto di Parma",
+      "top_nduja": "Acılı 'Nduja",
+      "top_chicken": "Izgara Tavuk",
+      "top_mushroom": "Yabani Mantar",
+      "top_onion": "Kırmızı Soğan",
+      "top_peppers": "Közlenmiş Biber",
+      "top_olives": "Kalamata Zeytini",
+      "top_jalapeno": "Jalapeño",
+      "top_basil": "Taze Fesleğen",
+      "top_burrata": "Burrata",
+      "top_truffle": "Trüf Yağı",
+      "top_honey": "Acılı Bal",
+      "top_rocket": "Yabani Roka"
+    },
+    "addons": {
+      "add_garlic": "Sarımsaklı Otlu Sos",
+      "add_ranch": "Ayranlı Ranch Sos",
+      "add_chili": "Kalabriya Acı Biber Yağı",
+      "add_parm": "Parmesan Rendesi",
+      "add_cutlery": "Çatal Bıçak & Peçete"
+    },
+    "promotions": {
+      "promo_welcome": {
+        "title": "Siparişinizde %10 indirim",
+        "description": "Bella Napoli'ye hoş geldiniz — her siparişte %10 indirimin tadını çıkarın."
+      },
+      "promo_pizza20": {
+        "title": "40 $ üzeri siparişlerde %20 indirim",
+        "description": "Kalabalık mı doyuracaksınız? 40 $ ve üzeri siparişlerde %20 indirim."
+      },
+      "promo_freedel": {
+        "title": "Ücretsiz teslimat",
+        "description": "25 $ üzeri siparişlerde ücretsiz teslimat."
+      },
+      "promo_bella5": {
+        "title": "5 $ indirim",
+        "description": "30 $ üzeri siparişlerde 5 $ indirim."
+      }
+    },
+    "reviews": {
+      "rev_1": {
+        "quote": "Hamuru inanılmaz — çıtır, yumuşak ve hafif. 'Nduja & Hot Honey'den sonra başka hiçbir pizza aynı tadı vermiyor."
+      },
+      "rev_2": {
+        "quote": "On iki kişilik ekip öğle yemeği için sipariş verdik. Erken geldi, hâlâ dumanı tütüyordu ve takip bilgileri tam isabetti."
+      },
+      "rev_3": {
+        "quote": "Truffle Funghi Bianca şehrin en iyi beyaz pizzası. Sadece tiramisusu için bile gelmeye değer."
+      },
+      "rev_4": {
+        "quote": "Harika bir Margherita, bol burrata ve glutensiz hamuru gerçekten güzel. Nadir bulunur."
+      },
+      "rev_5": {
+        "quote": "Pizzamı özelleştirmek çok kolaydı ve malzeme ekledikçe fiyat güncellendi. Ödemede sürpriz yok."
+      }
+    },
+    "products": {
+      "prd_margherita": {
+        "description": "San Marzano domatesi, fior di latte mozzarella, taze fesleğen ve bir tutam Sicilya sızma zeytinyağı. Sade, mükemmel, Napoli usulü."
+      },
+      "prd_pepperoni": {
+        "name": "Klasik Pepperoni",
+        "description": "Ağır ateşte pişmiş domates sosu üzerinde çıtır pepperoni ve bol mozzarella."
+      },
+      "prd_quattro": {
+        "description": "Sarımsaklı krema tabanında mozzarella, gorgonzola dolce, fontina ve olgun parmigiano, üzerine biberiye."
+      },
+      "prd_capricciosa": {
+        "description": "Fırın jambon, yabani mantar, enginar kalbi, zeytin ve mozzarella — her şeyi bir arada Napoli pizzası."
+      },
+      "prd_diavola": {
+        "description": "San Marzano domatesi üzerinde acılı salam, Kalabriya biberi, siyah zeytin ve mozzarella. Ateşe hazır olun."
+      },
+      "prd_special": {
+        "description": "Ev pizzamız: rezeneli sosis, közlenmiş biber, kırmızı soğan, mantar ve isli provola, üzerine fesleğen yağı."
+      },
+      "prd_nduja": {
+        "name": "'Nduja & Acılı Bal",
+        "description": "Sürülebilir Kalabriya 'nduja'sı, çıtır pepperoni, Kalamata zeytini ve acılı bal. Tatlı, isli, ateşli."
+      },
+      "prd_bbq": {
+        "name": "İsli Barbekü Tavuk",
+        "description": "Izgara tavuk, hickory barbekü tabanı, kırmızı soğan, tatlı biber, kişniş ve isli mozzarella."
+      },
+      "prd_meatfeast": {
+        "name": "Et Şöleni Inferno",
+        "description": "Pepperoni, İtalyan sosisi, acılı salam ve didiklenmiş dana eti; jalapeño ve acı biber yağıyla. Yüreği zayıf olanlara göre değil."
+      },
+      "prd_detroit": {
+        "description": "Karamelize peynir kenarlı kare kalın tava hamuru, pepperoni ve şerit şerit iri domates sosu."
+      },
+      "prd_truffle": {
+        "description": "Yabani mantar, fior di latte, taleggio, kekik ve siyah trüf yağıyla beyaz pizza; üzerine parmigiano."
+      },
+      "prd_prosciutto": {
+        "name": "Prosciutto & Roka",
+        "description": "24 ay olgunlaştırılmış Prosciutto di Parma, yabani roka, çeri domates ve parmigiano — pişirmeden sonra mozzarella üzerine."
+      },
+      "prd_burrata": {
+        "description": "Margherita'mız, bütün bir Puglia burratası, koparılmış fesleğen ve taze çekilmiş karabiberle taçlandırıldı."
+      },
+      "prd_provola": {
+        "name": "İsli Provola & Sosis",
+        "description": "Rezeneli sosis, friarielli yeşillikleri ve isli provola — Napoli sokak lezzeti klasiği."
+      },
+      "prd_fresca": {
+        "name": "Bahçe Fresca",
+        "description": "Domates tabanında ata tohumu domatesler, közlenmiş biber, kırmızı soğan, mantar, zeytin ve fesleğen."
+      },
+      "prd_florentine": {
+        "name": "Floransa Ispanak & Ricotta",
+        "description": "Sarımsaklı ıspanak, çırpılmış ricotta, mozzarella ve limon kabuğu, üzerine taze karabiber."
+      },
+      "prd_caprese": {
+        "name": "İnce Caprese",
+        "description": "Çeri domates, fior di latte, fesleğenli pesto ve olgun balzamikle ince, çıtır hamur."
+      },
+      "prd_bianca_greens": {
+        "name": "Ricotta & Yabani Otlar",
+        "description": "Beyaz tabanda mevsimlik yabani otlar, ricotta, sarımsak konfi ve pul biber. Günlük sınırlı üretim."
+      },
+      "prd_garlicbread": {
+        "name": "Sarımsaklı Tereyağlı Pide",
+        "description": "Közlenmiş sarımsaklı tereyağı, maydanoz ve deniz tuzu sürülmüş odun fırını pidesi."
+      },
+      "prd_chiliwings": {
+        "name": "Kalabriya Acılı Kanat",
+        "description": "Kalabriya acı biber sosuna bulanmış sekiz çıtır kanat, ranch sosla."
+      },
+      "prd_bbqwings": {
+        "name": "İsli Barbekü Kanat",
+        "description": "Hickory barbekü sosuyla kaplanmış fırın kanat, serinletici sarımsaklı sosla."
+      },
+      "prd_fries": {
+        "name": "Parmesanlı Trüflü Patates",
+        "description": "Kabuklu patates kızartması, trüf yağı, parmigiano ve biberiyeli tuz."
+      },
+      "prd_salad": {
+        "name": "Toskana Bahçe Salatası",
+        "description": "Çıtır yeşillikler, çeri domates, nohut, avokado ve limonlu otlu sos."
+      },
+      "prd_lemonade": {
+        "name": "Sicilya Limonatası",
+        "description": "Taze sıkılmış Sicilya limonu, nane ve bir tutam kamış şekeri. 400 ml."
+      },
+      "prd_spritz": {
+        "name": "Kan Portakalı Spritz %0",
+        "description": "Alkolsüz acı portakal aperitivo, maden suyu ve bir dilim kan portakalı."
+      },
+      "prd_water": {
+        "name": "Doğal Kaynak Suyu",
+        "description": "İtalyan kaynak suyu. 500 ml."
+      },
+      "prd_tiramisu": {
+        "name": "Klasik Tiramisu",
+        "description": "Espressoya batırılmış savoiardi, çırpılmış mascarpone ve bitter kakao — Nonna'nın tarifi."
+      },
+      "prd_affogato": {
+        "description": "Bir shot espresso ve tuzlu karamelle buluşan fior di latte gelato."
+      },
+      "prd_pannacotta": {
+        "name": "Meyveli Panna Cotta",
+        "description": "Marine çileklerle vanilyalı panna cotta."
+      },
+      "prd_brownie": {
+        "name": "Çikolatalı Fudge Brownie",
+        "description": "Bir tutam deniz tuzuyla sıcak, akışkan bitter çikolatalı brownie."
+      },
+      "prd_family": {
+        "name": "Aile Ziyafeti",
+        "description": "Seçeceğiniz 2 büyük klasik pizza, sarımsaklı tereyağlı pide ve 2 Sicilya limonatası. 12 $'dan fazla tasarruf."
+      },
+      "prd_datenight": {
+        "name": "İki Kişilik Akşam",
+        "description": "Bir premium pizza, Toskana bahçe salatası ve paylaşmak için bir tiramisu."
+      },
+      "prd_lunch": {
+        "name": "Öğle Menüsü",
+        "description": "Seçeceğiniz bir içecekle küçük klasik pizza. Hafta içi 11:00–15:00."
+      },
+      "prd_gamenight": {
+        "name": "Maç Gecesi Paketi",
+        "description": "3 büyük pizza, 16 kanat ve trüflü patates — büyük maç için."
+      }
+    }
+  }
+}

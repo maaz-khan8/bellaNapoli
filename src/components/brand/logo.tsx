@@ -1,7 +1,8 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element -- logo may be a user-uploaded data URL */
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { useDataStore } from "@/store/data-store";
 
@@ -36,21 +37,22 @@ export function Logo({
   compact?: boolean;
 }) {
   const name = useDataStore((s) => s.restaurant.name);
+  const t = useTranslations("brand");
   const [first, ...rest] = name.replace(/\s*pizza$/i, "").split(" ");
   return (
     <Link
       href={href}
       className={cn("group inline-flex items-center gap-2.5 rounded-lg", className)}
-      aria-label={`${name} home`}
+      aria-label={t("home", { name })}
     >
       <LogoMark className="transition-transform duration-500 group-hover:rotate-[18deg]" />
       {!compact && (
         <span className="flex flex-col leading-none">
-          <span className={cn("font-display text-xl font-semibold tracking-tight", tone === "light" ? "text-white" : "text-charcoal-900")}>
+          <span className={cn("font-display text-lg font-semibold tracking-tight whitespace-nowrap sm:text-xl", tone === "light" ? "text-white" : "text-charcoal-900")}>
             {first} <span className="italic text-tomato-500">{rest.join(" ")}</span>
           </span>
-          <span className={cn("mt-1 text-[10px] font-semibold uppercase tracking-[0.22em]", tone === "light" ? "text-white/60" : "text-charcoal-400")}>
-            Pizzeria · Est. 1998
+          <span className={cn("mt-1 text-[10px] font-semibold whitespace-nowrap uppercase tracking-[0.1em] sm:tracking-[0.22em]", tone === "light" ? "text-white/60" : "text-charcoal-400")}>
+            {t("tagline")}
           </span>
         </span>
       )}

@@ -1,0 +1,746 @@
+{
+  "meta": {
+    "title": "Bella Napoli Pizza — Wood-fired pizza, delivered",
+    "description": "Order hand-stretched, wood-fired Neapolitan pizza from Bella Napoli. Delivery and pickup. (Interactive UI prototype.)",
+    "menuTitle": "Menu",
+    "signInTitle": "Sign in"
+  },
+  "brand": {
+    "home": "{name} — home",
+    "tagline": "Pizzeria · Est. 1998"
+  },
+  "language": {
+    "label": "Language: {language}. Change language",
+    "choose": "Choose language"
+  },
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "deals": "Deals",
+    "story": "Our Story",
+    "visit": "Visit",
+    "signedOut": "Signed out",
+    "signedOutBody": "See you again soon!",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close menu",
+    "navigation": "Navigation",
+    "navigationDescription": "Site navigation and account links",
+    "mobileNav": "Mobile",
+    "mainNav": "Main",
+    "myAccount": "My account",
+    "myOrders": "My orders",
+    "addresses": "Addresses",
+    "signOut": "Sign out",
+    "signIn": "Sign in",
+    "signInOrRegister": "Sign in or register",
+    "managerPortal": "Manager portal",
+    "superAdmin": "Super Admin",
+    "accountMenu": "Account menu",
+    "cart": "Cart",
+    "openCart": "Open cart, {count, plural, one {# item} other {# items}}",
+    "skip": "Skip to content"
+  },
+  "banner": {
+    "promo": "Free delivery over $40 · Use <code>WELCOME10</code> for 10% off"
+  },
+  "ordering": {
+    "unavailable": "{name} is temporarily unavailable for online orders.",
+    "paused": "The kitchen is not accepting online orders right now. Please check back soon."
+  },
+  "footer": {
+    "about": "{tagline}. Hand-stretched dough, San Marzano tomatoes and a 485°C wood oven.",
+    "menu": "Menu",
+    "account": "Your account",
+    "signIn": "Sign in",
+    "createAccount": "Create account",
+    "trackOrder": "Track an order",
+    "cart": "Your cart",
+    "visit": "Visit us",
+    "openDaily": "Open daily · see hours above",
+    "copyright": "© {from}–2026 {name}. Interactive UI prototype — all orders, accounts and payments are simulated.",
+    "managerPortal": "Restaurant Manager",
+    "superAdmin": "Super Admin"
+  },
+  "common": {
+    "loading": "Loading",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "hidePassword": "Hide password",
+    "showPassword": "Show password",
+    "quantity": "Quantity",
+    "removeItem": "Remove item",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "checkingSession": "Checking your session"
+  },
+  "demo": {
+    "reset": "Reset demo data",
+    "confirmTitle": "Reset all demo data?",
+    "confirmBody": "This restores the original menu, restaurant profile, customers and order history, clears the cart and removes demo registrations. Built-in demo logins stay signed in.",
+    "confirm": "Reset demo",
+    "done": "Demo data restored",
+    "doneBody": "Everything is back to its original state."
+  },
+  "status": {
+    "progress": "Order progress",
+    "current": "current status",
+    "pending": {
+      "label": "Pending",
+      "description": "Waiting for the restaurant to confirm"
+    },
+    "accepted": {
+      "label": "Accepted",
+      "description": "The kitchen has confirmed your order"
+    },
+    "preparing": {
+      "label": "Preparing",
+      "description": "Your pizza is in the wood-fired oven"
+    },
+    "ready": {
+      "delivery": "Out for Delivery",
+      "pickup": "Ready for Pickup",
+      "description": "Packed and ready to go"
+    },
+    "completed": {
+      "label": "Completed",
+      "description": "Enjoy your meal — buon appetito!"
+    },
+    "rejected": {
+      "label": "Rejected",
+      "description": "The restaurant couldn't accept this order"
+    },
+    "cancelled": {
+      "label": "Cancelled",
+      "description": "This order was cancelled"
+    },
+    "notes": {
+      "cancelledByCustomer": "Cancelled by customer",
+      "cancelledByRestaurant": "Cancelled by restaurant",
+      "kitchenFull": "Kitchen at full capacity",
+      "itemUnavailable": "Item unavailable",
+      "outsideArea": "Address outside delivery area",
+      "closingSoon": "Restaurant closing soon"
+    }
+  },
+  "totals": {
+    "subtotal": "Subtotal",
+    "subtotalItems": "Subtotal ({count, plural, one {# item} other {# items}})",
+    "discount": "Discount",
+    "deliveryFee": "Delivery fee",
+    "pickup": "Pickup",
+    "free": "Free",
+    "total": "Total",
+    "promoInvalid": "This promo code isn't valid.",
+    "promoMinimum": "Add {amount} more to use {code}."
+  },
+  "cart": {
+    "added": "{count}× {name} added",
+    "addedToOrder": "Added to your order",
+    "viewCart": "View cart",
+    "reordered": "Added {count, plural, one {# item} other {# items}} from order {number}",
+    "unavailableToday": "Unavailable today: {items}",
+    "todaysPrices": "Prices reflect today's menu.",
+    "nothingAvailable": "Nothing from this order is available right now.",
+    "unavailable": "This item is currently unavailable — please remove it to check out.",
+    "quantityFor": "Quantity for {name}",
+    "remove": "Remove {name}",
+    "removeShort": "Remove",
+    "freeDeliveryUnlocked": "You've unlocked free delivery!",
+    "freeDeliveryProgress": "Add <strong>{amount}</strong> for free delivery",
+    "freeDeliveryLabel": "Progress to free delivery",
+    "removePromo": "Remove promo code",
+    "promoCode": "Promo code",
+    "promoPlaceholder": "Promo code (try WELCOME10)",
+    "apply": "Apply",
+    "drawerTitle": "Your order",
+    "drawerCount": "{count, plural, one {# item} other {# items}} from Bella Napoli",
+    "drawerEmpty": "Nothing here yet",
+    "emptyTitle": "Your cart is empty",
+    "emptyDrawer": "Our wood-fired oven is hot and ready. Add a pizza to get started.",
+    "emptyPage": "Looks like you haven't added anything yet. Our ovens are fired up and ready.",
+    "browseMenu": "Browse the menu",
+    "checkout": "Checkout",
+    "viewOrder": "View your order",
+    "loading": "Loading your cart",
+    "title": "Your cart",
+    "subtitle": "{count, plural, one {# item} other {# items}} · ready when you are",
+    "clear": "Clear cart",
+    "itemsLabel": "Cart items",
+    "continueShopping": "Continue shopping",
+    "summary": "Order summary",
+    "minimum": "Delivery orders need a minimum of {minimum}. Add {amount} more or switch to pickup.",
+    "proceed": "Proceed to checkout",
+    "signInNote": "You'll sign in before placing your order — your cart is saved."
+  },
+  "fulfillment": {
+    "label": "Delivery or pickup",
+    "delivery": "Delivery",
+    "pickup": "Pickup",
+    "eta": "~{minutes} min",
+    "unavailable": "Unavailable"
+  },
+  "tags": {
+    "veg": "Vegetarian",
+    "spicy": "Spicy",
+    "new": "New",
+    "chef": "Chef's pick"
+  },
+  "product": {
+    "bestseller": "Bestseller",
+    "rated": "Rated {rating} out of 5",
+    "new": "New",
+    "soldOut": "Sold out today",
+    "from": "From",
+    "add": "Add",
+    "customize": "Customize {name}",
+    "quickAddPizza": "Add {name} to cart (Medium, classic crust)",
+    "quickAdd": "Add {name} to cart",
+    "soldOutAria": "{name} is sold out",
+    "notFound": "We couldn't find that item",
+    "notFoundBody": "It may have been removed from the menu. Take a look at what's fresh from the oven today.",
+    "backToMenu": "Back to menu",
+    "related": "You might also like"
+  },
+  "menu": {
+    "eyebrow": "Bella Napoli menu",
+    "title": "Pick your <em>perfect</em> pie",
+    "intro": "Wood-fired pizzas, sides, desserts and deals. Customise any pizza — size, crust and toppings — on its page.",
+    "searchLabel": "Search the menu",
+    "searchPlaceholder": "Search pizzas, toppings, sides…",
+    "clearSearch": "Clear search",
+    "categories": "Menu categories",
+    "all": "All",
+    "availableNow": "Available now",
+    "sortLabel": "Sort products",
+    "sort": {
+      "popular": "Most popular",
+      "rating": "Top rated",
+      "price-asc": "Price: low to high",
+      "price-desc": "Price: high to low",
+      "name": "Name A–Z"
+    },
+    "results": "Showing <strong>{count}</strong> {count, plural, one {item} other {items}}",
+    "resultsFor": "Showing <strong>{count}</strong> {count, plural, one {item} other {items}} for “{query}”",
+    "emptyTitle": "No matches on the menu",
+    "emptyBody": "Try a different search or clear your filters — our pizzaiolo has plenty more to offer.",
+    "clearFilters": "Clear filters",
+    "viewOnly": "View only these"
+  },
+  "customizer": {
+    "breadcrumb": "Breadcrumb",
+    "home": "Home",
+    "menu": "Menu",
+    "soldOutToday": "Sold out today",
+    "bestseller": "Bestseller",
+    "reviews": "{formatted} {count, plural, one {review} other {reviews}}",
+    "newOnMenu": "New on the menu",
+    "calories": "{kcal} kcal",
+    "caloriesMedium": "{kcal} kcal (medium)",
+    "size": "Choose your size",
+    "crust": "Choose your crust",
+    "toppings": "Extra toppings",
+    "toppingsHint": "{count}/{max} selected · optional",
+    "addons": "Add-ons",
+    "notes": "Special instructions",
+    "notesPlaceholder": "e.g. Well done, light on the sauce, cut into squares…",
+    "required": "Required",
+    "optional": "Optional",
+    "included": "Included",
+    "out": "Out",
+    "allergies": "Allergies? Please also call us on {phone}.",
+    "quantityOf": "Quantity of {name}",
+    "addLong": "Add to cart",
+    "addAria": "Add to cart, {total}",
+    "soldOut": "Sold out",
+    "soldOutAria": "{name} is sold out",
+    "breakdown": {
+      "base": "{amount} base",
+      "crust": "{amount} crust",
+      "toppings": "{amount} toppings",
+      "addons": "{amount} add-ons"
+    }
+  },
+  "hero": {
+    "label": "Featured pizzas",
+    "slideOf": "{n} of {total}",
+    "chooseSlide": "Choose slide",
+    "slideLabel": "Slide {n}: {title}",
+    "pause": "Pause slideshow",
+    "play": "Play slideshow",
+    "previous": "Previous slide",
+    "next": "Next slide",
+    "rating": "Guest rating",
+    "delivery": "Delivery",
+    "oven": "Oven temp",
+    "minutes": "{minutes} min",
+    "featuredPizza": "Featured pizza",
+    "from": "From",
+    "only": "Only",
+    "hotFresh": "Hot & fresh in {minutes} min",
+    "slides": {
+      "s1": {
+        "eyebrow": "Authentic Neapolitan · since 1998",
+        "title1": "Fired at 485°C.",
+        "title2": "Ready in",
+        "title3": "90 seconds.",
+        "body": "48-hour dough, San Marzano tomatoes and fior di latte — blistered in our hand-built wood oven and delivered to your door, still crackling.",
+        "primary": "Order now",
+        "secondary": "Build a Margherita"
+      },
+      "s2": {
+        "eyebrow": "New signature pizza",
+        "title1": "Sweet heat:",
+        "title2": "'Nduja &",
+        "title3": "Hot Honey.",
+        "body": "Spreadable Calabrian 'nduja, cupped pepperoni and Kalamata olives, finished with a slow drizzle of chilli-infused honey.",
+        "primary": "Try it tonight",
+        "secondary": "See signatures"
+      },
+      "s3": {
+        "eyebrow": "Weekend family deal",
+        "title1": "Two large pizzas.",
+        "title2": "One happy",
+        "title3": "table.",
+        "body": "The Family Feast: any two large classics, garlic butter flatbread and two Sicilian lemonades. Save over $12 every weekend.",
+        "primary": "Grab the deal",
+        "secondary": "All deals"
+      }
+    }
+  },
+  "home": {
+    "trust": {
+      "label": "Why Bella Napoli",
+      "dough": {
+        "title": "48-hour dough",
+        "body": "Slow-fermented daily"
+      },
+      "tomatoes": {
+        "title": "San Marzano DOP",
+        "body": "Imported from Campania"
+      },
+      "oven": {
+        "title": "Wood-fired",
+        "body": "90 seconds at 485°C"
+      },
+      "delivery": {
+        "title": "Delivered hot",
+        "body": "Insulated, tracked bags"
+      }
+    },
+    "categories": {
+      "eyebrow": "Explore the menu",
+      "title": "Something for <em>every</em> craving",
+      "fullMenu": "Full menu",
+      "count": "{count, plural, one {# item} other {# items}}"
+    },
+    "featured": {
+      "eyebrow": "Featured this week",
+      "title": "Straight from the <em>wood oven</em>",
+      "description": "Hand-picked by our pizzaiolo, Giuseppe. Tap a pizza to choose your size, crust and toppings."
+    },
+    "promos": {
+      "label": "Special offers",
+      "feast": {
+        "badge": "Weekend deal",
+        "title": "The Family Feast",
+        "body": "2 large pizzas, garlic flatbread & 2 lemonades.",
+        "cta": "Order the feast"
+      },
+      "code": {
+        "badge": "Promo code",
+        "fallback": "20% off big orders"
+      },
+      "welcome": {
+        "badge": "First order?",
+        "title": "10% off with WELCOME10",
+        "cta": "Create your account"
+      }
+    },
+    "bestsellers": {
+      "eyebrow": "Most ordered",
+      "title": "Neighbourhood <em>favourites</em>",
+      "scrollLeft": "Scroll favourites left",
+      "scrollRight": "Scroll favourites right"
+    },
+    "about": {
+      "eyebrow": "Our story",
+      "title": "A little piece of <em>Naples</em> in Manhattan",
+      "ovenAlt": "A pizza baking in Bella Napoli's wood-fired oven",
+      "roomAlt": "The Bella Napoli dining room",
+      "years": "years on Mulberry St.",
+      "quote": "Good pizza needs only four things: flour, water, time — and fire. The rest is love.",
+      "quoteBy": "Giuseppe Esposito, founder & pizzaiolo",
+      "stats": {
+        "pizzasValue": "1.2M+",
+        "pizzas": "pizzas fired",
+        "reviews": "{count} reviews",
+        "fresh": "fresh daily"
+      }
+    },
+    "how": {
+      "eyebrow": "Ordering made easy",
+      "title": "From our oven to your table",
+      "customise": {
+        "title": "Customise",
+        "body": "Pick your size, crust and toppings — the price updates as you go."
+      },
+      "checkout": {
+        "title": "Checkout",
+        "body": "Sign in, choose delivery or pickup and pay cash on delivery."
+      },
+      "track": {
+        "title": "Track live",
+        "body": "Follow your order from the oven to your door in real time."
+      }
+    },
+    "reviews": {
+      "eyebrow": "Loved locally",
+      "title": "{rating} stars from {count} guests",
+      "stars": "{rating} out of 5 stars"
+    },
+    "visit": {
+      "eyebrow": "Visit & delivery",
+      "title": "Come say <em>ciao</em>",
+      "hours": "Opening hours",
+      "today": "today",
+      "closed": "Closed",
+      "midnight": "Midnight",
+      "delivery": "Delivery",
+      "deliveryRadius": "Within {km} km of Mulberry St · ~{minutes} min",
+      "deliveryFee": "{fee} fee · free over {threshold}",
+      "deliveryMinimum": "Minimum order {amount}",
+      "deliveryPaused": "Delivery is paused right now — pickup is available.",
+      "pickup": "Pickup",
+      "pickupBody": "Ready in about {minutes} minutes. Skip the queue at our pickup counter.",
+      "pickupOff": "Pickup is currently unavailable.",
+      "findUs": "Find us",
+      "startOrder": "Start an order"
+    },
+    "cta": {
+      "label": "Order now",
+      "title": "Hungry? Your pizza is <em>{minutes} minutes</em> away.",
+      "body": "Browse without an account — just sign in when you're ready to check out.",
+      "order": "Order now",
+      "register": "Create account"
+    }
+  },
+  "days": {
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
+  },
+  "validation": {
+    "nameRequired": "Please enter your full name",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Enter a valid email address",
+    "phoneRequired": "Phone number is required",
+    "phoneInvalid": "Enter a valid phone number, e.g. (212) 555-0123",
+    "passwordRequired": "Password is required",
+    "passwordLength": "Use at least 8 characters",
+    "passwordUppercase": "Include at least one uppercase letter",
+    "passwordNumber": "Include at least one number",
+    "confirmRequired": "Please confirm your password",
+    "passwordMismatch": "Passwords don't match",
+    "termsRequired": "Please accept the demo terms to continue",
+    "labelRequired": "Give this address a label, e.g. Home",
+    "streetRequired": "Enter a street address",
+    "cityRequired": "Enter a city",
+    "zipInvalid": "Enter a 5-digit ZIP code",
+    "notesTooLong": "Keep notes under 120 characters",
+    "instructionsTooLong": "Keep instructions under 200 characters",
+    "paymentRequired": "Please choose a payment method"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "signedInAs": "Signed in as <strong>{email}</strong>",
+    "editCart": "Edit cart",
+    "emptyTitle": "Nothing to check out yet",
+    "emptyBody": "Your cart is empty. Add a pizza or two and come back here.",
+    "browseMenu": "Browse the menu",
+    "steps": {
+      "contact": "Contact details",
+      "fulfillment": "Delivery or pickup",
+      "payment": "Payment",
+      "review": "Review your order"
+    },
+    "fields": {
+      "name": "Full name",
+      "phone": "Phone number",
+      "phoneHint": "The driver will call if needed",
+      "email": "Email",
+      "emailHint": "For your demo receipt",
+      "street": "Street address",
+      "streetPlaceholder": "214 Spring Street, Apt 3",
+      "city": "City",
+      "zip": "ZIP code",
+      "instructions": "Delivery instructions",
+      "instructionsPlaceholder": "Gate code, floor, leave at door…",
+      "kitchenNotes": "Notes for the kitchen",
+      "kitchenNotesPlaceholder": "Anything we should know?"
+    },
+    "deliveryAddress": "Delivery address",
+    "default": "Default",
+    "newAddress": "Use a new address",
+    "saveAddress": "Save this address to my account",
+    "addressHome": "Home",
+    "addressOther": "Other",
+    "pickupAt": "Pick up at {name}",
+    "readyIn": "ready in ~{minutes} min",
+    "paymentMethod": "Payment method",
+    "cod": "Cash on Delivery",
+    "codDelivery": "Pay the driver when your order arrives",
+    "codPickup": "Pay at the counter when you collect",
+    "card": "Credit or debit card",
+    "wallet": "Apple Pay / Google Pay",
+    "comingSoon": "Coming soon",
+    "summary": "Order summary",
+    "placing": "Placing your order…",
+    "place": "Place order · {total}",
+    "demoNote": "Demo transaction — no payment is taken and no food will be delivered.",
+    "cantPlace": "We can't place this order yet",
+    "checkDetails": "Please check your details",
+    "checkDetailsBody": "Some required fields need attention.",
+    "blockers": {
+      "unavailable": "Remove unavailable items: {items}.",
+      "minimum": "Delivery needs a {minimum} minimum — add {amount} more or choose pickup.",
+      "noDelivery": "Delivery is currently unavailable — please choose pickup.",
+      "noPickup": "Pickup is currently unavailable — please choose delivery."
+    }
+  },
+  "confirmation": {
+    "notFound": "Order not found",
+    "notFoundBody": "We couldn't find this order on your account.",
+    "viewOrders": "View my orders",
+    "demo": "Demo transaction",
+    "title": "Grazie, {name}! Your order is in.",
+    "sent": "Order <strong>{number}</strong> was sent to the {name} kitchen at {time}.",
+    "etaArrival": "Estimated arrival",
+    "etaReady": "Estimated ready",
+    "about": "about {minutes} minutes",
+    "delivery": "Delivery",
+    "pickup": "Pickup",
+    "status": "Current status",
+    "live": "Updates live as the kitchen works",
+    "items": "Your items",
+    "details": "Details",
+    "cod": "Cash on Delivery",
+    "placed": "Placed {date}",
+    "track": "Track order",
+    "continue": "Continue shopping"
+  },
+  "tracking": {
+    "updated": "Order {number}: {status}",
+    "notFound": "Order not found",
+    "notFoundBody": "This order doesn't exist or belongs to a different account.",
+    "myOrders": "My orders",
+    "allOrders": "All orders",
+    "order": "Order {number}",
+    "etaArrival": "Estimated arrival",
+    "etaReady": "Estimated ready",
+    "progress": "Order progress",
+    "liveSync": "Live demo sync — status changes made in the Restaurant Manager dashboard appear here automatically.",
+    "timeline": "Order timeline",
+    "summary": "Summary",
+    "detailsLabel": "Delivery details",
+    "pickupAt": "Pickup at {address}",
+    "cod": "Cash on Delivery",
+    "questions": "Questions? Call {phone}",
+    "cancel": "Cancel order",
+    "cancelTitle": "Cancel order {number}?",
+    "cancelBody": "You can cancel while the restaurant hasn't accepted your order yet. This can't be undone.",
+    "cancelled": "Order cancelled",
+    "orderAgain": "Order again"
+  },
+  "orders": {
+    "order": "Order {number}",
+    "delivery": "Delivery",
+    "pickup": "Pickup",
+    "items": "{count, plural, one {# item} other {# items}}",
+    "reorder": "Reorder",
+    "track": "Track order",
+    "details": "Details"
+  },
+  "account": {
+    "greeting": "Ciao, {name}!",
+    "memberSince": "Member since {date}",
+    "navLabel": "Account",
+    "tabs": {
+      "profile": "Profile",
+      "orders": "Orders",
+      "addresses": "Addresses"
+    },
+    "signedOut": "Signed out",
+    "signOut": "Sign out",
+    "stats": {
+      "orders": "Orders placed",
+      "spent": "Total spent",
+      "since": "Member since"
+    },
+    "active": "{count, plural, one {Active order} other {Active orders}}",
+    "personal": "Personal information",
+    "personalHint": "Used to pre-fill checkout. Changes are saved to this browser.",
+    "updated": "Profile updated",
+    "recent": "Recent orders",
+    "viewAll": "View all",
+    "noOrders": "No orders yet — <link>order your first pizza</link>.",
+    "profile": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "save": "Save changes"
+    },
+    "history": {
+      "title": "Order history",
+      "subtitle": "Track active orders and reorder past favourites.",
+      "all": "All ({count})",
+      "active": "Active ({count})",
+      "past": "Past",
+      "noActive": "No active orders",
+      "none": "No orders yet",
+      "noneBody": "When you place an order it'll show up here with live tracking.",
+      "orderNow": "Order now"
+    }
+  },
+  "addresses": {
+    "title": "Saved addresses",
+    "subtitle": "Choose one at checkout for faster ordering.",
+    "add": "Add address",
+    "emptyTitle": "No saved addresses",
+    "emptyBody": "Add your home or work address to check out in seconds.",
+    "default": "Default",
+    "edit": "Edit",
+    "makeDefault": "Make default",
+    "defaultSet": "{label} is now your default address",
+    "delete": "Delete",
+    "deleteTitle": "Delete “{label}”?",
+    "deleteBody": "This address will be removed from your account.",
+    "deleted": "Address deleted",
+    "addTitle": "Add a new address",
+    "editTitle": "Edit address",
+    "dialogNote": "Demo addresses are stored only in this browser.",
+    "added": "Address added",
+    "updated": "Address updated",
+    "cancel": "Cancel",
+    "save": "Save address",
+    "fields": {
+      "label": "Label",
+      "labelPlaceholder": "Home, Work, Mum's place…",
+      "street": "Street address",
+      "line2": "Apartment, suite (optional)",
+      "city": "City",
+      "zip": "ZIP",
+      "notes": "Delivery notes (optional)",
+      "notesPlaceholder": "Buzzer, gate code…",
+      "default": "Set as default delivery address"
+    }
+  },
+  "auth": {
+    "roles": {
+      "customer": "customer",
+      "manager": "Restaurant Manager",
+      "admin": "Super Admin"
+    },
+    "demo": {
+      "title": {
+        "customer": "Demo Customer account",
+        "manager": "Demo Restaurant Manager account",
+        "admin": "Demo Platform Super Admin account"
+      },
+      "email": "Email",
+      "password": "Password",
+      "use": "Use"
+    },
+    "layout": {
+      "back": "Back to site",
+      "note": "Interactive prototype · accounts are stored only in this browser",
+      "stars": "5 out of 5 stars",
+      "quote": "The crust is unreal — blistered, chewy, and light. Ordering takes thirty seconds.",
+      "quoteBy": "Marcus T., SoHo · one of 2,847 five-star reviews"
+    },
+    "loginPage": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to order, track deliveries and reorder your favourites.",
+      "new": "New to Bella Napoli?",
+      "create": "Create an account"
+    },
+    "login": {
+      "email": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "remember": "Remember me",
+      "forgot": "Forgot password?",
+      "forgotPreview": "Password reset is a preview feature",
+      "forgotPreviewBody": "In production this would email a secure reset link.",
+      "submit": "Sign in",
+      "signingIn": "Signing in…",
+      "welcomeBack": "Welcome back, {name}!",
+      "cartSavedToast": "Your cart is saved — let's finish your order.",
+      "checkoutGate": "<strong>Sign in to place your order.</strong> Your cart{count, plural, =0 {} one { (# item)} other { (# items)}} is saved and you'll go straight back to checkout.",
+      "denied": "You're signed in as a <strong>{current}</strong>, which can't open that page. Sign in with a {required} account to continue.",
+      "continueToPage": "Please sign in to continue to that page.",
+      "goToPortal": "Go to the {portal} sign-in",
+      "errors": {
+        "invalidCredentials": "Incorrect email or password. Check the demo credentials below.",
+        "wrongPortal": "This account doesn't have access here. Please sign in through the {portal} portal.",
+        "profileMissing": "We couldn't find this customer profile. Try resetting the demo data.",
+        "deactivated": "This account has been deactivated by the platform. Contact support for help.",
+        "emailTaken": "An account with this email already exists. Try signing in instead."
+      }
+    },
+    "register": {
+      "title": "Create your account",
+      "subtitle": "Save addresses, track orders live and reorder in one tap.",
+      "perk": "New members get <strong>10% off</strong> with code WELCOME10.",
+      "name": "Full name",
+      "namePlaceholder": "Sophia Romano",
+      "email": "Email",
+      "phone": "Phone",
+      "password": "Password",
+      "passwordHint": "At least 8 characters, one uppercase letter and one number",
+      "strength": "Password strength: <strong>{level}</strong>",
+      "strengthLevels": {
+        "tooShort": "Too short",
+        "weak": "Weak",
+        "fair": "Fair",
+        "good": "Good",
+        "strong": "Strong"
+      },
+      "confirm": "Confirm password",
+      "terms": "I understand this is a demo account stored only in this browser, and agree to the prototype terms.",
+      "submit": "Create account",
+      "creating": "Creating account…",
+      "welcome": "Welcome to Bella Napoli, {name}!",
+      "welcomeBody": "Use WELCOME10 at checkout for 10% off.",
+      "already": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "forgot": {
+      "title": "Forgot your password?",
+      "subtitle": "Enter the email you signed up with and we'll send you a reset link.",
+      "email": "Email address",
+      "submit": "Send reset link",
+      "sending": "Sending…",
+      "sentTitle": "Check your inbox",
+      "sentBody": "If an account exists for <strong>{email}</strong>, we'd send a reset link.",
+      "demoNote": "Demo mode: no email is actually sent. Use the demo password <code>Demo123!</code> to sign in.",
+      "back": "Back to sign in"
+    }
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "body": "An unexpected error occurred in the prototype. Try again — if it keeps happening, resetting the demo data usually fixes it.",
+    "retry": "Try again",
+    "reset": "Reset demo data"
+  },
+  "notFound": {
+    "title": "This slice is missing",
+    "body": "The page you're looking for doesn't exist or has moved. Let's get you back to something delicious.",
+    "home": "Back home",
+    "menu": "See the menu"
+  }
+}

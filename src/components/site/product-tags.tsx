@@ -1,4 +1,7 @@
+"use client";
+
 import { ChefHat, Flame, Leaf, Sparkles } from "lucide-react";
+import { useTranslations } from "next-intl";
 import type { ProductTag } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -10,11 +13,12 @@ const TAGS: Record<ProductTag, { label: string; icon: typeof Leaf; className: st
 };
 
 export function ProductTagBadge({ tag, className }: { tag: ProductTag; className?: string }) {
-  const t = TAGS[tag];
+  const meta = TAGS[tag];
+  const t = useTranslations("tags");
   return (
-    <span className={cn("inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold ring-1 ring-inset", t.className, className)}>
-      <t.icon className="size-3" aria-hidden="true" />
-      {t.label}
+    <span className={cn("inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold ring-1 ring-inset", meta.className, className)}>
+      <meta.icon className="size-3" aria-hidden="true" />
+      {t(tag)}
     </span>
   );
 }

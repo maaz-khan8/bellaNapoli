@@ -1,0 +1,1003 @@
+{
+  "meta": {
+    "title": "Bella Napoli Pizza — Holzofenpizza, geliefert",
+    "description": "Bestelle handgezogene neapolitanische Pizza aus dem Holzofen bei Bella Napoli. Lieferung und Abholung. (Interaktiver UI-Prototyp.)",
+    "menuTitle": "Speisekarte",
+    "signInTitle": "Anmelden"
+  },
+  "brand": {
+    "home": "{name} — Startseite",
+    "tagline": "Pizzeria · Seit 1998"
+  },
+  "language": {
+    "label": "Sprache: {language}. Sprache ändern",
+    "choose": "Sprache wählen"
+  },
+  "nav": {
+    "home": "Start",
+    "menu": "Speisekarte",
+    "deals": "Angebote",
+    "story": "Über uns",
+    "visit": "Besuch",
+    "signedOut": "Abgemeldet",
+    "signedOutBody": "Bis bald!",
+    "openMenu": "Navigationsmenü öffnen",
+    "closeMenu": "Menü schließen",
+    "navigation": "Navigation",
+    "navigationDescription": "Seitennavigation und Konto-Links",
+    "mobileNav": "Mobil",
+    "mainNav": "Hauptnavigation",
+    "myAccount": "Mein Konto",
+    "myOrders": "Meine Bestellungen",
+    "addresses": "Adressen",
+    "signOut": "Abmelden",
+    "signIn": "Anmelden",
+    "signInOrRegister": "Anmelden oder registrieren",
+    "managerPortal": "Manager-Portal",
+    "superAdmin": "Super Admin",
+    "accountMenu": "Kontomenü",
+    "cart": "Warenkorb",
+    "openCart": "Warenkorb öffnen, {count, plural, one {# Artikel} other {# Artikel}}",
+    "skip": "Zum Inhalt springen"
+  },
+  "banner": {
+    "promo": "Gratis-Lieferung ab $40 · Mit <code>WELCOME10</code> 10 % sparen"
+  },
+  "ordering": {
+    "unavailable": "{name} nimmt vorübergehend keine Online-Bestellungen an.",
+    "paused": "Die Küche nimmt gerade keine Online-Bestellungen an. Bitte schau später wieder vorbei."
+  },
+  "footer": {
+    "about": "{tagline}. Handgezogener Teig, San-Marzano-Tomaten und ein 485 °C heißer Holzofen.",
+    "menu": "Speisekarte",
+    "account": "Dein Konto",
+    "signIn": "Anmelden",
+    "createAccount": "Konto erstellen",
+    "trackOrder": "Bestellung verfolgen",
+    "cart": "Dein Warenkorb",
+    "visit": "Besuch uns",
+    "openDaily": "Täglich geöffnet · Zeiten siehe oben",
+    "copyright": "© {from}–2026 {name}. Interaktiver UI-Prototyp — alle Bestellungen, Konten und Zahlungen sind simuliert.",
+    "managerPortal": "Restaurant-Manager",
+    "superAdmin": "Super Admin"
+  },
+  "common": {
+    "loading": "Wird geladen",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "close": "Schließen",
+    "hidePassword": "Passwort verbergen",
+    "showPassword": "Passwort anzeigen",
+    "quantity": "Menge",
+    "removeItem": "Artikel entfernen",
+    "decrease": "Menge verringern",
+    "increase": "Menge erhöhen",
+    "checkingSession": "Sitzung wird geprüft"
+  },
+  "demo": {
+    "reset": "Demodaten zurücksetzen",
+    "confirmTitle": "Alle Demodaten zurücksetzen?",
+    "confirmBody": "Speisekarte, Restaurantprofil, Kunden und Bestellverlauf werden wiederhergestellt, der Warenkorb geleert und Demo-Registrierungen entfernt. Die eingebauten Demo-Logins bleiben angemeldet.",
+    "confirm": "Demo zurücksetzen",
+    "done": "Demodaten wiederhergestellt",
+    "doneBody": "Alles ist wieder im Originalzustand."
+  },
+  "status": {
+    "progress": "Bestellfortschritt",
+    "current": "aktueller Status",
+    "pending": {
+      "label": "Ausstehend",
+      "description": "Wartet auf Bestätigung durch das Restaurant"
+    },
+    "accepted": {
+      "label": "Angenommen",
+      "description": "Die Küche hat deine Bestellung bestätigt"
+    },
+    "preparing": {
+      "label": "In Zubereitung",
+      "description": "Deine Pizza ist im Holzofen"
+    },
+    "ready": {
+      "delivery": "Unterwegs zu dir",
+      "pickup": "Abholbereit",
+      "description": "Verpackt und bereit"
+    },
+    "completed": {
+      "label": "Abgeschlossen",
+      "description": "Lass es dir schmecken — buon appetito!"
+    },
+    "rejected": {
+      "label": "Abgelehnt",
+      "description": "Das Restaurant konnte diese Bestellung nicht annehmen"
+    },
+    "cancelled": {
+      "label": "Storniert",
+      "description": "Diese Bestellung wurde storniert"
+    },
+    "notes": {
+      "cancelledByCustomer": "Vom Kunden storniert",
+      "cancelledByRestaurant": "Vom Restaurant storniert",
+      "kitchenFull": "Küche ist voll ausgelastet",
+      "itemUnavailable": "Artikel nicht verfügbar",
+      "outsideArea": "Adresse außerhalb des Liefergebiets",
+      "closingSoon": "Restaurant schließt bald"
+    }
+  },
+  "totals": {
+    "subtotal": "Zwischensumme",
+    "subtotalItems": "Zwischensumme ({count, plural, one {# Artikel} other {# Artikel}})",
+    "discount": "Rabatt",
+    "deliveryFee": "Liefergebühr",
+    "pickup": "Abholung",
+    "free": "Gratis",
+    "total": "Gesamt",
+    "promoInvalid": "Dieser Gutscheincode ist ungültig.",
+    "promoMinimum": "Füge noch {amount} hinzu, um {code} zu nutzen."
+  },
+  "cart": {
+    "added": "{count}× {name} hinzugefügt",
+    "addedToOrder": "Zu deiner Bestellung hinzugefügt",
+    "viewCart": "Warenkorb ansehen",
+    "reordered": "{count, plural, one {# Artikel} other {# Artikel}} aus Bestellung {number} hinzugefügt",
+    "unavailableToday": "Heute nicht verfügbar: {items}",
+    "todaysPrices": "Es gelten die heutigen Preise.",
+    "nothingAvailable": "Aus dieser Bestellung ist gerade nichts verfügbar.",
+    "unavailable": "Dieser Artikel ist derzeit nicht verfügbar — bitte entferne ihn, um zur Kasse zu gehen.",
+    "quantityFor": "Menge für {name}",
+    "remove": "{name} entfernen",
+    "removeShort": "Entfernen",
+    "freeDeliveryUnlocked": "Du hast die Gratis-Lieferung freigeschaltet!",
+    "freeDeliveryProgress": "Noch <strong>{amount}</strong> bis zur Gratis-Lieferung",
+    "freeDeliveryLabel": "Fortschritt bis zur Gratis-Lieferung",
+    "removePromo": "Gutscheincode entfernen",
+    "promoCode": "Gutscheincode",
+    "promoPlaceholder": "Gutscheincode (probier WELCOME10)",
+    "apply": "Einlösen",
+    "drawerTitle": "Deine Bestellung",
+    "drawerCount": "{count, plural, one {# Artikel} other {# Artikel}} von Bella Napoli",
+    "drawerEmpty": "Noch nichts drin",
+    "emptyTitle": "Dein Warenkorb ist leer",
+    "emptyDrawer": "Unser Holzofen ist heiß und bereit. Füge eine Pizza hinzu, um loszulegen.",
+    "emptyPage": "Du hast noch nichts hinzugefügt. Unsere Öfen sind angeheizt und bereit.",
+    "browseMenu": "Zur Speisekarte",
+    "checkout": "Zur Kasse",
+    "viewOrder": "Bestellung ansehen",
+    "loading": "Warenkorb wird geladen",
+    "title": "Dein Warenkorb",
+    "subtitle": "{count, plural, one {# Artikel} other {# Artikel}} · bereit, wenn du es bist",
+    "clear": "Warenkorb leeren",
+    "itemsLabel": "Artikel im Warenkorb",
+    "continueShopping": "Weiter einkaufen",
+    "summary": "Bestellübersicht",
+    "minimum": "Lieferbestellungen erfordern mindestens {minimum}. Füge noch {amount} hinzu oder wähle Abholung.",
+    "proceed": "Weiter zur Kasse",
+    "signInNote": "Vor dem Bestellen meldest du dich an — dein Warenkorb bleibt gespeichert."
+  },
+  "fulfillment": {
+    "label": "Lieferung oder Abholung",
+    "delivery": "Lieferung",
+    "pickup": "Abholung",
+    "eta": "~{minutes} Min.",
+    "unavailable": "Nicht verfügbar"
+  },
+  "tags": {
+    "veg": "Vegetarisch",
+    "spicy": "Scharf",
+    "new": "Neu",
+    "chef": "Tipp vom Chef"
+  },
+  "product": {
+    "bestseller": "Bestseller",
+    "rated": "Bewertet mit {rating} von 5",
+    "new": "Neu",
+    "soldOut": "Heute ausverkauft",
+    "from": "Ab",
+    "add": "Hinzufügen",
+    "customize": "{name} anpassen",
+    "quickAddPizza": "{name} in den Warenkorb (Mittel, klassischer Boden)",
+    "quickAdd": "{name} in den Warenkorb",
+    "soldOutAria": "{name} ist ausverkauft",
+    "notFound": "Diesen Artikel haben wir nicht gefunden",
+    "notFoundBody": "Er wurde vielleicht von der Speisekarte genommen. Schau dir an, was heute frisch aus dem Ofen kommt.",
+    "backToMenu": "Zurück zur Speisekarte",
+    "related": "Das könnte dir auch schmecken"
+  },
+  "menu": {
+    "eyebrow": "Bella Napoli Speisekarte",
+    "title": "Finde deine <em>perfekte</em> Pizza",
+    "intro": "Holzofenpizzen, Beilagen, Desserts und Angebote. Passe jede Pizza — Größe, Boden und Beläge — auf ihrer Seite an.",
+    "searchLabel": "Speisekarte durchsuchen",
+    "searchPlaceholder": "Pizzen, Beläge, Beilagen suchen…",
+    "clearSearch": "Suche löschen",
+    "categories": "Kategorien",
+    "all": "Alle",
+    "availableNow": "Jetzt verfügbar",
+    "sortLabel": "Produkte sortieren",
+    "sort": {
+      "popular": "Beliebteste",
+      "rating": "Am besten bewertet",
+      "price-asc": "Preis: aufsteigend",
+      "price-desc": "Preis: absteigend",
+      "name": "Name A–Z"
+    },
+    "results": "<strong>{count}</strong> {count, plural, one {Artikel} other {Artikel}}",
+    "resultsFor": "<strong>{count}</strong> {count, plural, one {Artikel} other {Artikel}} für „{query}“",
+    "emptyTitle": "Keine Treffer auf der Speisekarte",
+    "emptyBody": "Versuch eine andere Suche oder setze die Filter zurück — unser Pizzaiolo hat noch viel mehr zu bieten.",
+    "clearFilters": "Filter zurücksetzen",
+    "viewOnly": "Nur diese anzeigen"
+  },
+  "customizer": {
+    "breadcrumb": "Brotkrümelnavigation",
+    "home": "Start",
+    "menu": "Speisekarte",
+    "soldOutToday": "Heute ausverkauft",
+    "bestseller": "Bestseller",
+    "reviews": "{formatted} {count, plural, one {Bewertung} other {Bewertungen}}",
+    "newOnMenu": "Neu auf der Karte",
+    "calories": "{kcal} kcal",
+    "caloriesMedium": "{kcal} kcal (Mittel)",
+    "size": "Wähle deine Größe",
+    "crust": "Wähle deinen Boden",
+    "toppings": "Extra-Beläge",
+    "toppingsHint": "{count}/{max} gewählt · optional",
+    "addons": "Extras",
+    "notes": "Besondere Wünsche",
+    "notesPlaceholder": "z. B. gut durch, wenig Soße, in Quadrate geschnitten…",
+    "required": "Pflichtfeld",
+    "optional": "Optional",
+    "included": "Inklusive",
+    "out": "Aus",
+    "allergies": "Allergien? Ruf uns bitte zusätzlich unter {phone} an.",
+    "quantityOf": "Menge von {name}",
+    "addLong": "In den Warenkorb",
+    "addAria": "In den Warenkorb, {total}",
+    "soldOut": "Ausverkauft",
+    "soldOutAria": "{name} ist ausverkauft",
+    "breakdown": {
+      "base": "{amount} Grundpreis",
+      "crust": "{amount} Boden",
+      "toppings": "{amount} Beläge",
+      "addons": "{amount} Extras"
+    }
+  },
+  "hero": {
+    "label": "Ausgewählte Pizzen",
+    "slideOf": "{n} von {total}",
+    "chooseSlide": "Folie wählen",
+    "slideLabel": "Folie {n}: {title}",
+    "pause": "Diashow pausieren",
+    "play": "Diashow abspielen",
+    "previous": "Vorherige Folie",
+    "next": "Nächste Folie",
+    "rating": "Gästebewertung",
+    "delivery": "Lieferung",
+    "oven": "Ofentemperatur",
+    "minutes": "{minutes} Min.",
+    "featuredPizza": "Ausgewählte Pizza",
+    "from": "Ab",
+    "only": "Nur",
+    "hotFresh": "Heiß & frisch in {minutes} Min.",
+    "slides": {
+      "s1": {
+        "eyebrow": "Original neapolitanisch · seit 1998",
+        "title1": "Gebacken bei 485 °C.",
+        "title2": "Fertig in",
+        "title3": "90 Sekunden.",
+        "body": "48-Stunden-Teig, San-Marzano-Tomaten und Fior di Latte — knusprig gebacken in unserem handgemauerten Holzofen und noch knisternd an deine Tür geliefert.",
+        "primary": "Jetzt bestellen",
+        "secondary": "Margherita zusammenstellen"
+      },
+      "s2": {
+        "eyebrow": "Neue Signature-Pizza",
+        "title1": "Süße Schärfe:",
+        "title2": "'Nduja &",
+        "title3": "scharfer Honig.",
+        "body": "Streichfähige kalabrische 'Nduja, knusprige Pepperoni und Kalamata-Oliven, verfeinert mit einem Hauch Chili-Honig.",
+        "primary": "Heute probieren",
+        "secondary": "Signature-Pizzen"
+      },
+      "s3": {
+        "eyebrow": "Familien-Angebot am Wochenende",
+        "title1": "Zwei große Pizzen.",
+        "title2": "Ein glücklicher",
+        "title3": "Tisch.",
+        "body": "Das Familienfest: zwei große Klassiker nach Wahl, Knoblauchbutter-Fladenbrot und zwei Sizilianische Limonaden. Spare jedes Wochenende über $12.",
+        "primary": "Angebot sichern",
+        "secondary": "Alle Angebote"
+      }
+    }
+  },
+  "home": {
+    "trust": {
+      "label": "Warum Bella Napoli",
+      "dough": {
+        "title": "48-Stunden-Teig",
+        "body": "Täglich langsam gereift"
+      },
+      "tomatoes": {
+        "title": "San Marzano DOP",
+        "body": "Direkt aus Kampanien"
+      },
+      "oven": {
+        "title": "Aus dem Holzofen",
+        "body": "90 Sekunden bei 485 °C"
+      },
+      "delivery": {
+        "title": "Heiß geliefert",
+        "body": "Isolierte Taschen mit Live-Tracking"
+      }
+    },
+    "categories": {
+      "eyebrow": "Entdecke die Karte",
+      "title": "Für <em>jeden</em> Hunger etwas dabei",
+      "fullMenu": "Ganze Speisekarte",
+      "count": "{count, plural, one {# Artikel} other {# Artikel}}"
+    },
+    "featured": {
+      "eyebrow": "Diese Woche empfohlen",
+      "title": "Direkt aus dem <em>Holzofen</em>",
+      "description": "Ausgewählt von unserem Pizzaiolo Giuseppe. Tippe auf eine Pizza, um Größe, Boden und Beläge zu wählen."
+    },
+    "promos": {
+      "label": "Sonderangebote",
+      "feast": {
+        "badge": "Wochenend-Deal",
+        "title": "Das Familienfest",
+        "body": "2 große Pizzen, Knoblauch-Fladenbrot & 2 Limonaden.",
+        "cta": "Familienfest bestellen"
+      },
+      "code": {
+        "badge": "Gutscheincode",
+        "fallback": "20 % Rabatt auf große Bestellungen"
+      },
+      "welcome": {
+        "badge": "Erste Bestellung?",
+        "title": "10 % Rabatt mit WELCOME10",
+        "cta": "Konto erstellen"
+      }
+    },
+    "bestsellers": {
+      "eyebrow": "Am häufigsten bestellt",
+      "title": "Die <em>Lieblinge</em> der Nachbarschaft",
+      "scrollLeft": "Lieblinge nach links blättern",
+      "scrollRight": "Lieblinge nach rechts blättern"
+    },
+    "about": {
+      "eyebrow": "Unsere Geschichte",
+      "title": "Ein kleines Stück <em>Neapel</em> in Manhattan",
+      "ovenAlt": "Eine Pizza backt im Holzofen von Bella Napoli",
+      "roomAlt": "Der Gastraum von Bella Napoli",
+      "years": "Jahre in der Mulberry St.",
+      "quote": "Gute Pizza braucht nur vier Dinge: Mehl, Wasser, Zeit — und Feuer. Der Rest ist Liebe.",
+      "quoteBy": "Giuseppe Esposito, Gründer & Pizzaiolo",
+      "stats": {
+        "pizzasValue": "1,2 Mio.+",
+        "pizzas": "gebackene Pizzen",
+        "reviews": "{count} Bewertungen",
+        "fresh": "täglich frisch"
+      }
+    },
+    "how": {
+      "eyebrow": "Ganz einfach bestellen",
+      "title": "Aus unserem Ofen auf deinen Tisch",
+      "customise": {
+        "title": "Anpassen",
+        "body": "Wähle Größe, Boden und Beläge — der Preis aktualisiert sich sofort."
+      },
+      "checkout": {
+        "title": "Bestellen",
+        "body": "Melde dich an, wähle Lieferung oder Abholung und zahle bar bei Lieferung."
+      },
+      "track": {
+        "title": "Live verfolgen",
+        "body": "Verfolge deine Bestellung in Echtzeit vom Ofen bis zu deiner Tür."
+      }
+    },
+    "reviews": {
+      "eyebrow": "Beliebt in der Nachbarschaft",
+      "title": "{rating} Sterne von {count} Gästen",
+      "stars": "{rating} von 5 Sternen"
+    },
+    "visit": {
+      "eyebrow": "Besuch & Lieferung",
+      "title": "Komm vorbei und sag <em>ciao</em>",
+      "hours": "Öffnungszeiten",
+      "today": "heute",
+      "closed": "Geschlossen",
+      "midnight": "Mitternacht",
+      "delivery": "Lieferung",
+      "deliveryRadius": "Im Umkreis von {km} km um die Mulberry St · ~{minutes} Min.",
+      "deliveryFee": "{fee} Liefergebühr · gratis ab {threshold}",
+      "deliveryMinimum": "Mindestbestellwert {amount}",
+      "deliveryPaused": "Die Lieferung ist gerade pausiert — Abholung ist möglich.",
+      "pickup": "Abholung",
+      "pickupBody": "In etwa {minutes} Minuten fertig. Spar dir die Schlange an unserer Abholtheke.",
+      "pickupOff": "Abholung ist derzeit nicht möglich.",
+      "findUs": "So findest du uns",
+      "startOrder": "Bestellung starten"
+    },
+    "cta": {
+      "label": "Jetzt bestellen",
+      "title": "Hunger? Deine Pizza ist nur <em>{minutes} Minuten</em> entfernt.",
+      "body": "Stöbere ohne Konto — melde dich erst an, wenn du bestellen möchtest.",
+      "order": "Jetzt bestellen",
+      "register": "Konto erstellen"
+    }
+  },
+  "days": {
+    "monday": "Montag",
+    "tuesday": "Dienstag",
+    "wednesday": "Mittwoch",
+    "thursday": "Donnerstag",
+    "friday": "Freitag",
+    "saturday": "Samstag",
+    "sunday": "Sonntag"
+  },
+  "validation": {
+    "nameRequired": "Bitte gib deinen vollständigen Namen ein",
+    "emailRequired": "E-Mail ist erforderlich",
+    "emailInvalid": "Gib eine gültige E-Mail-Adresse ein",
+    "phoneRequired": "Telefonnummer ist erforderlich",
+    "phoneInvalid": "Gib eine gültige Telefonnummer ein, z. B. (212) 555-0123",
+    "passwordRequired": "Passwort ist erforderlich",
+    "passwordLength": "Mindestens 8 Zeichen verwenden",
+    "passwordUppercase": "Mindestens einen Großbuchstaben verwenden",
+    "passwordNumber": "Mindestens eine Zahl verwenden",
+    "confirmRequired": "Bitte bestätige dein Passwort",
+    "passwordMismatch": "Die Passwörter stimmen nicht überein",
+    "termsRequired": "Bitte akzeptiere die Demo-Bedingungen, um fortzufahren",
+    "labelRequired": "Gib der Adresse eine Bezeichnung, z. B. Zuhause",
+    "streetRequired": "Gib eine Straße und Hausnummer ein",
+    "cityRequired": "Gib einen Ort ein",
+    "zipInvalid": "Gib eine 5-stellige Postleitzahl ein",
+    "notesTooLong": "Hinweise dürfen höchstens 120 Zeichen lang sein",
+    "instructionsTooLong": "Hinweise dürfen höchstens 200 Zeichen lang sein",
+    "paymentRequired": "Bitte wähle eine Zahlungsart"
+  },
+  "checkout": {
+    "title": "Kasse",
+    "signedInAs": "Angemeldet als <strong>{email}</strong>",
+    "editCart": "Warenkorb bearbeiten",
+    "emptyTitle": "Noch nichts zum Bestellen",
+    "emptyBody": "Dein Warenkorb ist leer. Füge eine oder zwei Pizzen hinzu und komm dann wieder.",
+    "browseMenu": "Zur Speisekarte",
+    "steps": {
+      "contact": "Kontaktdaten",
+      "fulfillment": "Lieferung oder Abholung",
+      "payment": "Zahlung",
+      "review": "Bestellung prüfen"
+    },
+    "fields": {
+      "name": "Vollständiger Name",
+      "phone": "Telefonnummer",
+      "phoneHint": "Der Fahrer ruft bei Bedarf an",
+      "email": "E-Mail",
+      "emailHint": "Für deine Demo-Quittung",
+      "street": "Straße und Hausnummer",
+      "streetPlaceholder": "214 Spring Street, Apt 3",
+      "city": "Ort",
+      "zip": "Postleitzahl",
+      "instructions": "Lieferhinweise",
+      "instructionsPlaceholder": "Torcode, Etage, vor der Tür abstellen…",
+      "kitchenNotes": "Hinweise für die Küche",
+      "kitchenNotesPlaceholder": "Gibt es etwas, das wir wissen sollten?"
+    },
+    "deliveryAddress": "Lieferadresse",
+    "default": "Standard",
+    "newAddress": "Neue Adresse verwenden",
+    "saveAddress": "Diese Adresse in meinem Konto speichern",
+    "addressHome": "Zuhause",
+    "addressOther": "Sonstige",
+    "pickupAt": "Abholung bei {name}",
+    "readyIn": "fertig in ~{minutes} Min.",
+    "paymentMethod": "Zahlungsart",
+    "cod": "Barzahlung bei Lieferung",
+    "codDelivery": "Bezahle den Fahrer, wenn deine Bestellung ankommt",
+    "codPickup": "Bezahle an der Theke bei der Abholung",
+    "card": "Kredit- oder Debitkarte",
+    "wallet": "Apple Pay / Google Pay",
+    "comingSoon": "Demnächst",
+    "summary": "Bestellübersicht",
+    "placing": "Bestellung wird aufgegeben…",
+    "place": "Bestellen · {total}",
+    "demoNote": "Demo-Transaktion — es wird nichts berechnet und keine Pizza geliefert.",
+    "cantPlace": "Diese Bestellung kann noch nicht aufgegeben werden",
+    "checkDetails": "Bitte prüfe deine Angaben",
+    "checkDetailsBody": "Einige Pflichtfelder brauchen deine Aufmerksamkeit.",
+    "blockers": {
+      "unavailable": "Entferne nicht verfügbare Artikel: {items}.",
+      "minimum": "Lieferungen erfordern mindestens {minimum} — füge noch {amount} hinzu oder wähle Abholung.",
+      "noDelivery": "Lieferung ist derzeit nicht möglich — bitte wähle Abholung.",
+      "noPickup": "Abholung ist derzeit nicht möglich — bitte wähle Lieferung."
+    }
+  },
+  "confirmation": {
+    "notFound": "Bestellung nicht gefunden",
+    "notFoundBody": "Wir konnten diese Bestellung in deinem Konto nicht finden.",
+    "viewOrders": "Meine Bestellungen",
+    "demo": "Demo-Transaktion",
+    "title": "Grazie, {name}! Deine Bestellung ist eingegangen.",
+    "sent": "Bestellung <strong>{number}</strong> wurde um {time} an die Küche von {name} gesendet.",
+    "etaArrival": "Voraussichtliche Ankunft",
+    "etaReady": "Voraussichtlich fertig",
+    "about": "in etwa {minutes} Minuten",
+    "delivery": "Lieferung",
+    "pickup": "Abholung",
+    "status": "Aktueller Status",
+    "live": "Wird live aktualisiert, während die Küche arbeitet",
+    "items": "Deine Artikel",
+    "details": "Details",
+    "cod": "Barzahlung bei Lieferung",
+    "placed": "Bestellt am {date}",
+    "track": "Bestellung verfolgen",
+    "continue": "Weiter einkaufen"
+  },
+  "tracking": {
+    "updated": "Bestellung {number}: {status}",
+    "notFound": "Bestellung nicht gefunden",
+    "notFoundBody": "Diese Bestellung existiert nicht oder gehört zu einem anderen Konto.",
+    "myOrders": "Meine Bestellungen",
+    "allOrders": "Alle Bestellungen",
+    "order": "Bestellung {number}",
+    "etaArrival": "Voraussichtliche Ankunft",
+    "etaReady": "Voraussichtlich fertig",
+    "progress": "Bestellfortschritt",
+    "liveSync": "Live-Demo-Synchronisierung — Statusänderungen im Restaurant-Manager-Dashboard erscheinen hier automatisch.",
+    "timeline": "Bestellverlauf",
+    "summary": "Übersicht",
+    "detailsLabel": "Lieferdetails",
+    "pickupAt": "Abholung bei {address}",
+    "cod": "Barzahlung bei Lieferung",
+    "questions": "Fragen? Ruf {phone} an",
+    "cancel": "Bestellung stornieren",
+    "cancelTitle": "Bestellung {number} stornieren?",
+    "cancelBody": "Du kannst stornieren, solange das Restaurant deine Bestellung noch nicht angenommen hat. Das kann nicht rückgängig gemacht werden.",
+    "cancelled": "Bestellung storniert",
+    "orderAgain": "Erneut bestellen"
+  },
+  "orders": {
+    "order": "Bestellung {number}",
+    "delivery": "Lieferung",
+    "pickup": "Abholung",
+    "items": "{count, plural, one {# Artikel} other {# Artikel}}",
+    "reorder": "Nachbestellen",
+    "track": "Verfolgen",
+    "details": "Details"
+  },
+  "account": {
+    "greeting": "Ciao, {name}!",
+    "memberSince": "Mitglied seit {date}",
+    "navLabel": "Konto",
+    "tabs": {
+      "profile": "Profil",
+      "orders": "Bestellungen",
+      "addresses": "Adressen"
+    },
+    "signedOut": "Abgemeldet",
+    "signOut": "Abmelden",
+    "stats": {
+      "orders": "Bestellungen",
+      "spent": "Insgesamt ausgegeben",
+      "since": "Mitglied seit"
+    },
+    "active": "{count, plural, one {Aktive Bestellung} other {Aktive Bestellungen}}",
+    "personal": "Persönliche Daten",
+    "personalHint": "Wird zum Vorausfüllen der Kasse verwendet. Änderungen werden in diesem Browser gespeichert.",
+    "updated": "Profil aktualisiert",
+    "recent": "Letzte Bestellungen",
+    "viewAll": "Alle ansehen",
+    "noOrders": "Noch keine Bestellungen — <link>bestell deine erste Pizza</link>.",
+    "profile": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "save": "Änderungen speichern"
+    },
+    "history": {
+      "title": "Bestellverlauf",
+      "subtitle": "Verfolge aktive Bestellungen und bestelle deine Lieblinge nach.",
+      "all": "Alle ({count})",
+      "active": "Aktiv ({count})",
+      "past": "Vergangene",
+      "noActive": "Keine aktiven Bestellungen",
+      "none": "Noch keine Bestellungen",
+      "noneBody": "Sobald du bestellst, erscheint deine Bestellung hier mit Live-Tracking.",
+      "orderNow": "Jetzt bestellen"
+    }
+  },
+  "addresses": {
+    "title": "Gespeicherte Adressen",
+    "subtitle": "Wähle eine an der Kasse für schnelleres Bestellen.",
+    "add": "Adresse hinzufügen",
+    "emptyTitle": "Keine gespeicherten Adressen",
+    "emptyBody": "Füge deine Wohn- oder Arbeitsadresse hinzu und bestelle in Sekunden.",
+    "default": "Standard",
+    "edit": "Bearbeiten",
+    "makeDefault": "Als Standard festlegen",
+    "defaultSet": "{label} ist jetzt deine Standardadresse",
+    "delete": "Löschen",
+    "deleteTitle": "„{label}“ löschen?",
+    "deleteBody": "Diese Adresse wird aus deinem Konto entfernt.",
+    "deleted": "Adresse gelöscht",
+    "addTitle": "Neue Adresse hinzufügen",
+    "editTitle": "Adresse bearbeiten",
+    "dialogNote": "Demo-Adressen werden nur in diesem Browser gespeichert.",
+    "added": "Adresse hinzugefügt",
+    "updated": "Adresse aktualisiert",
+    "cancel": "Abbrechen",
+    "save": "Adresse speichern",
+    "fields": {
+      "label": "Bezeichnung",
+      "labelPlaceholder": "Zuhause, Arbeit, bei Mama…",
+      "street": "Straße und Hausnummer",
+      "line2": "Wohnung, Etage (optional)",
+      "city": "Ort",
+      "zip": "PLZ",
+      "notes": "Lieferhinweise (optional)",
+      "notesPlaceholder": "Klingel, Torcode…",
+      "default": "Als Standard-Lieferadresse festlegen"
+    }
+  },
+  "auth": {
+    "roles": {
+      "customer": "Kunde",
+      "manager": "Restaurant-Manager",
+      "admin": "Super Admin"
+    },
+    "demo": {
+      "title": {
+        "customer": "Demo-Kundenkonto",
+        "manager": "Demo-Konto Restaurant-Manager",
+        "admin": "Demo-Konto Plattform Super Admin"
+      },
+      "email": "E-Mail",
+      "password": "Passwort",
+      "use": "Nutzen"
+    },
+    "layout": {
+      "back": "Zurück zur Website",
+      "note": "Interaktiver Prototyp · Konten werden nur in diesem Browser gespeichert",
+      "stars": "5 von 5 Sternen",
+      "quote": "Der Boden ist unglaublich — knusprig, luftig und leicht. Die Bestellung dauert dreißig Sekunden.",
+      "quoteBy": "Marcus T., SoHo · eine von 2.847 Fünf-Sterne-Bewertungen"
+    },
+    "loginPage": {
+      "title": "Willkommen zurück",
+      "subtitle": "Melde dich an, um zu bestellen, Lieferungen zu verfolgen und Lieblinge nachzubestellen.",
+      "new": "Neu bei Bella Napoli?",
+      "create": "Konto erstellen"
+    },
+    "login": {
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "du@beispiel.de",
+      "password": "Passwort",
+      "remember": "Angemeldet bleiben",
+      "forgot": "Passwort vergessen?",
+      "forgotPreview": "Passwort-Zurücksetzen ist eine Vorschaufunktion",
+      "forgotPreviewBody": "Im Live-Betrieb würde ein sicherer Link per E-Mail verschickt.",
+      "submit": "Anmelden",
+      "signingIn": "Anmeldung läuft…",
+      "welcomeBack": "Willkommen zurück, {name}!",
+      "cartSavedToast": "Dein Warenkorb ist gespeichert — lass uns deine Bestellung abschließen.",
+      "checkoutGate": "<strong>Melde dich an, um zu bestellen.</strong> Dein Warenkorb{count, plural, =0 {} one { (# Artikel)} other { (# Artikel)}} bleibt gespeichert und du kommst direkt zurück zur Kasse.",
+      "denied": "Du bist als <strong>{current}</strong> angemeldet und kannst diese Seite nicht öffnen. Melde dich mit einem Konto als {required} an, um fortzufahren.",
+      "continueToPage": "Bitte melde dich an, um zu dieser Seite zu gelangen.",
+      "goToPortal": "Zur Anmeldung für {portal}",
+      "errors": {
+        "invalidCredentials": "E-Mail oder Passwort ist falsch. Sieh dir die Demo-Zugangsdaten unten an.",
+        "wrongPortal": "Dieses Konto hat hier keinen Zugriff. Bitte melde dich über das Portal für {portal} an.",
+        "profileMissing": "Wir konnten dieses Kundenprofil nicht finden. Setze die Demodaten zurück.",
+        "deactivated": "Dieses Konto wurde von der Plattform deaktiviert. Wende dich an den Support.",
+        "emailTaken": "Mit dieser E-Mail gibt es bereits ein Konto. Melde dich stattdessen an."
+      }
+    },
+    "register": {
+      "title": "Konto erstellen",
+      "subtitle": "Adressen speichern, Bestellungen live verfolgen und mit einem Tipp nachbestellen.",
+      "perk": "Neue Mitglieder erhalten <strong>10 % Rabatt</strong> mit dem Code WELCOME10.",
+      "name": "Vollständiger Name",
+      "namePlaceholder": "Sophia Romano",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "password": "Passwort",
+      "passwordHint": "Mindestens 8 Zeichen, ein Großbuchstabe und eine Zahl",
+      "strength": "Passwortstärke: <strong>{level}</strong>",
+      "strengthLevels": {
+        "tooShort": "Zu kurz",
+        "weak": "Schwach",
+        "fair": "Mittel",
+        "good": "Gut",
+        "strong": "Stark"
+      },
+      "confirm": "Passwort bestätigen",
+      "terms": "Mir ist bewusst, dass dies ein Demo-Konto ist, das nur in diesem Browser gespeichert wird, und ich stimme den Prototyp-Bedingungen zu.",
+      "submit": "Konto erstellen",
+      "creating": "Konto wird erstellt…",
+      "welcome": "Willkommen bei Bella Napoli, {name}!",
+      "welcomeBody": "Mit WELCOME10 sparst du 10 % an der Kasse.",
+      "already": "Du hast schon ein Konto?",
+      "signIn": "Anmelden"
+    },
+    "forgot": {
+      "title": "Passwort vergessen?",
+      "subtitle": "Gib die E-Mail-Adresse deines Kontos ein und wir schicken dir einen Link zum Zurücksetzen.",
+      "email": "E-Mail-Adresse",
+      "submit": "Link senden",
+      "sending": "Wird gesendet…",
+      "sentTitle": "Schau in dein Postfach",
+      "sentBody": "Falls ein Konto für <strong>{email}</strong> existiert, würden wir dir einen Link senden.",
+      "demoNote": "Demo-Modus: Es wird keine E-Mail verschickt. Melde dich mit dem Demo-Passwort <code>Demo123!</code> an.",
+      "back": "Zurück zur Anmeldung"
+    }
+  },
+  "errors": {
+    "title": "Etwas ist schiefgelaufen",
+    "body": "Im Prototyp ist ein unerwarteter Fehler aufgetreten. Versuch es erneut — wenn es weiter passiert, hilft meist das Zurücksetzen der Demodaten.",
+    "retry": "Erneut versuchen",
+    "reset": "Demodaten zurücksetzen"
+  },
+  "notFound": {
+    "title": "Dieses Stück fehlt",
+    "body": "Die gesuchte Seite gibt es nicht oder sie wurde verschoben. Lass uns dich zu etwas Leckerem zurückbringen.",
+    "home": "Zur Startseite",
+    "menu": "Zur Speisekarte"
+  },
+  "content": {
+    "restaurant": {
+      "tagline": "Neapolitanische Pizza aus dem Holzofen, handgemacht seit 1998",
+      "description": "Bella Napoli ist eine familiengeführte Pizzeria, die die Seele Neapels in die Nachbarschaft bringt. Unser Teig ruht 48 Stunden, unsere Tomaten wachsen an den Hängen des Vesuvs, und jede Pizza wird neunzig Sekunden lang in einem handgemauerten Holzofen bei 485 °C gebacken."
+    },
+    "sizes": {
+      "Small": "Klein",
+      "Medium": "Mittel",
+      "Large": "Groß",
+      "Family": "Familie"
+    },
+    "categories": {
+      "cat_classic": {
+        "name": "Klassische Pizzen",
+        "description": "Zeitlose neapolitanische Favoriten"
+      },
+      "cat_signature": {
+        "name": "Signature-Pizzen",
+        "description": "Die Hauskreationen unserer Köche"
+      },
+      "cat_premium": {
+        "name": "Premium-Pizzen",
+        "description": "Trüffel, Burrata & Parmaschinken"
+      },
+      "cat_veg": {
+        "name": "Vegetarische Pizzen",
+        "description": "Gartenfrisch und fleischlos"
+      },
+      "cat_sides": {
+        "name": "Beilagen",
+        "description": "Fladenbrot, Wings & Pommes"
+      },
+      "cat_drinks": {
+        "name": "Getränke",
+        "description": "Limonaden & Spritziges"
+      },
+      "cat_desserts": {
+        "name": "Desserts",
+        "description": "Tiramisu, Gelato & mehr"
+      },
+      "cat_deals": {
+        "name": "Sonderangebote",
+        "description": "Bundles, mit denen du mehr sparst"
+      }
+    },
+    "crusts": {
+      "crust_classic": {
+        "name": "Klassisch handgezogen",
+        "description": "Weich und luftig, 48-Stunden-Teig"
+      },
+      "crust_thin": {
+        "name": "Dünn & knusprig",
+        "description": "Nach römischer Art, extra knusprig"
+      },
+      "crust_napoli": {
+        "name": "Neapolitanisch aus dem Holzofen",
+        "description": "Gefleckter, luftiger Rand"
+      },
+      "crust_stuffed": {
+        "name": "Käsegefüllter Rand",
+        "description": "Rand mit Mozzarella-Füllung"
+      },
+      "crust_gf": {
+        "name": "Glutenfrei",
+        "description": "Blumenkohl & Reismehl"
+      }
+    },
+    "toppings": {
+      "top_mozz": "Extra Mozzarella",
+      "top_pepperoni": "Pepperoni",
+      "top_sausage": "Italienische Salsiccia",
+      "top_prosciutto": "Prosciutto di Parma",
+      "top_nduja": "Scharfe 'Nduja",
+      "top_chicken": "Gegrilltes Hähnchen",
+      "top_mushroom": "Waldpilze",
+      "top_onion": "Rote Zwiebeln",
+      "top_peppers": "Geröstete Paprika",
+      "top_olives": "Kalamata-Oliven",
+      "top_jalapeno": "Jalapeños",
+      "top_basil": "Frisches Basilikum",
+      "top_burrata": "Burrata",
+      "top_truffle": "Trüffelöl",
+      "top_honey": "Scharfer Honig",
+      "top_rocket": "Wilde Rucola"
+    },
+    "addons": {
+      "add_garlic": "Knoblauch-Kräuter-Dip",
+      "add_ranch": "Buttermilch-Ranch-Dip",
+      "add_chili": "Kalabrisches Chiliöl",
+      "add_parm": "Parmesanspäne",
+      "add_cutlery": "Besteck & Servietten"
+    },
+    "promotions": {
+      "promo_welcome": {
+        "title": "10 % Rabatt auf deine Bestellung",
+        "description": "Willkommen bei Bella Napoli — genieße 10 % Rabatt auf jede Bestellung."
+      },
+      "promo_pizza20": {
+        "title": "20 % Rabatt ab $40",
+        "description": "Für die ganze Runde? Spare 20 % ab einem Bestellwert von $40."
+      },
+      "promo_freedel": {
+        "title": "Gratis-Lieferung",
+        "description": "Gratis-Lieferung ab einem Bestellwert von $25."
+      },
+      "promo_bella5": {
+        "title": "$5 Rabatt",
+        "description": "$5 Rabatt ab einem Bestellwert von $30."
+      }
+    },
+    "reviews": {
+      "rev_1": {
+        "quote": "Der Boden ist unglaublich — knusprig, luftig und leicht. Seit der 'Nduja & Hot Honey schmeckt mir keine andere Pizza mehr."
+      },
+      "rev_2": {
+        "quote": "Für ein Team-Mittagessen mit zwölf Leuten bestellt. Früher als erwartet da, noch dampfend heiß, und das Tracking war auf den Punkt."
+      },
+      "rev_3": {
+        "quote": "Die Truffle Funghi Bianca ist die beste weiße Pizza der Stadt. Allein das Tiramisu ist den Weg wert."
+      },
+      "rev_4": {
+        "quote": "Wunderbare Margherita, großzügige Burrata, und der glutenfreie Boden ist wirklich gut. Eine Seltenheit."
+      },
+      "rev_5": {
+        "quote": "Die Pizza anzupassen war ganz einfach, und der Preis hat sich mit jedem Belag aktualisiert. Keine Überraschungen an der Kasse."
+      }
+    },
+    "products": {
+      "prd_margherita": {
+        "description": "San-Marzano-Tomaten, Fior di Latte, frisches Basilikum und ein Schuss sizilianisches Olivenöl extra vergine. Einfach, perfekt, neapolitanisch."
+      },
+      "prd_pepperoni": {
+        "name": "Klassische Pepperoni",
+        "description": "Knusprige Pepperoni auf langsam gekochter Tomatensoße unter einer großzügigen Schicht Mozzarella."
+      },
+      "prd_quattro": {
+        "description": "Mozzarella, Gorgonzola Dolce, Fontina und gereifter Parmigiano auf Knoblauchcreme, verfeinert mit Rosmarin."
+      },
+      "prd_capricciosa": {
+        "description": "Gebackener Schinken, Waldpilze, Artischockenherzen, Oliven und Mozzarella — die neapolitanische Pizza mit allem."
+      },
+      "prd_diavola": {
+        "description": "Scharfe Salami, kalabrische Chilis, schwarze Oliven und Mozzarella auf San-Marzano-Tomaten. Feuer frei."
+      },
+      "prd_special": {
+        "description": "Unsere Hauspizza: Fenchel-Salsiccia, geröstete Paprika, rote Zwiebeln, Pilze und geräucherte Provola, verfeinert mit Basilikumöl."
+      },
+      "prd_nduja": {
+        "name": "'Nduja & scharfer Honig",
+        "description": "Streichfähige kalabrische 'Nduja, knusprige Pepperoni, Kalamata-Oliven und ein Hauch Chili-Honig. Süß, rauchig, feurig."
+      },
+      "prd_bbq": {
+        "name": "Rauchiges BBQ-Hähnchen",
+        "description": "Gegrilltes Hähnchen, Hickory-BBQ-Basis, rote Zwiebeln, süße Paprika, Koriander und geräucherter Mozzarella."
+      },
+      "prd_meatfeast": {
+        "name": "Fleischfest Inferno",
+        "description": "Pepperoni, italienische Salsiccia, scharfe Salami und Pulled Beef mit Jalapeños und Chiliöl. Nichts für schwache Nerven."
+      },
+      "prd_detroit": {
+        "description": "Eckiger, dicker Pfannenboden mit karamellisierten Käserändern, Pepperoni und Streifen aus stückiger Tomatensoße."
+      },
+      "prd_truffle": {
+        "description": "Weiße Pizza mit Waldpilzen, Fior di Latte, Taleggio, Thymian und schwarzem Trüffelöl, dazu gehobelter Parmigiano."
+      },
+      "prd_prosciutto": {
+        "name": "Prosciutto & Rucola",
+        "description": "24 Monate gereifter Prosciutto di Parma, wilde Rucola, Kirschtomaten und Parmigiano — nach dem Backen auf den Mozzarella gelegt."
+      },
+      "prd_burrata": {
+        "description": "Unsere Margherita, gekrönt mit einer ganzen apulischen Burrata, gezupftem Basilikum und frisch gemahlenem Pfeffer."
+      },
+      "prd_provola": {
+        "name": "Geräucherte Provola & Salsiccia",
+        "description": "Fenchel-Salsiccia, Friarielli und geräucherte Provola — der Streetfood-Klassiker aus Neapel."
+      },
+      "prd_fresca": {
+        "name": "Garten Fresca",
+        "description": "Alte Tomatensorten, geröstete Paprika, rote Zwiebeln, Pilze, Oliven und Basilikum auf Tomatenbasis."
+      },
+      "prd_florentine": {
+        "name": "Florentina Spinat & Ricotta",
+        "description": "Knoblauchspinat, cremiger Ricotta, Mozzarella und Zitronenabrieb mit frisch gemahlenem Pfeffer."
+      },
+      "prd_caprese": {
+        "name": "Caprese dünn",
+        "description": "Dünner, knuspriger Boden mit Kirschtomaten, Fior di Latte, Basilikumpesto und gereiftem Balsamico."
+      },
+      "prd_bianca_greens": {
+        "name": "Ricotta & Wildkräuter",
+        "description": "Saisonale Wildkräuter, Ricotta, Knoblauchconfit und Chiliflocken auf weißer Basis. Begrenzte Tagesmenge."
+      },
+      "prd_garlicbread": {
+        "name": "Knoblauchbutter-Fladenbrot",
+        "description": "Fladenbrot aus dem Holzofen, bestrichen mit gerösteter Knoblauchbutter, Petersilie und Meersalz."
+      },
+      "prd_chiliwings": {
+        "name": "Kalabrische Chili-Wings",
+        "description": "Acht knusprige Wings in kalabrischer Chiliglasur, dazu Ranch-Dip."
+      },
+      "prd_bbqwings": {
+        "name": "Rauchige BBQ-Wings",
+        "description": "Im Ofen geröstete Wings mit Hickory-BBQ-Glasur und kühlendem Knoblauch-Dip."
+      },
+      "prd_fries": {
+        "name": "Parmesan-Trüffel-Pommes",
+        "description": "Pommes mit Schale, Trüffelöl, Parmigiano und Rosmarinsalz."
+      },
+      "prd_salad": {
+        "name": "Toskanischer Gartensalat",
+        "description": "Knackige Blattsalate, Kirschtomaten, Kichererbsen, Avocado und Zitronen-Kräuter-Vinaigrette."
+      },
+      "prd_lemonade": {
+        "name": "Sizilianische Limonade",
+        "description": "Frisch gepresste sizilianische Zitronen, Minze und ein Hauch Rohrzucker. 400 ml."
+      },
+      "prd_spritz": {
+        "name": "Blutorangen-Spritz 0 %",
+        "description": "Alkoholfreier Bitterorangen-Aperitivo, Sprudelwasser und eine Scheibe Blutorange."
+      },
+      "prd_water": {
+        "name": "Stilles Mineralwasser",
+        "description": "Italienisches Quellwasser. 500 ml."
+      },
+      "prd_tiramisu": {
+        "name": "Klassisches Tiramisu",
+        "description": "In Espresso getränkte Savoiardi, aufgeschlagener Mascarpone und herber Kakao — nach Nonnas Rezept."
+      },
+      "prd_affogato": {
+        "description": "Fior-di-Latte-Gelato, übergossen mit einem Espresso und gesalzenem Karamell."
+      },
+      "prd_pannacotta": {
+        "name": "Beeren-Panna-Cotta",
+        "description": "Vanille-Panna-Cotta mit marinierten Erdbeeren."
+      },
+      "prd_brownie": {
+        "name": "Schoko-Fudge-Brownie",
+        "description": "Warmer, saftiger Zartbitter-Brownie mit einer Prise Meersalz."
+      },
+      "prd_family": {
+        "name": "Familienfest",
+        "description": "2 große klassische Pizzen nach Wahl, Knoblauchbutter-Fladenbrot und 2 Sizilianische Limonaden. Spare über $12."
+      },
+      "prd_datenight": {
+        "name": "Date Night für zwei",
+        "description": "Eine Premium-Pizza, ein Toskanischer Gartensalat und ein Tiramisu zum Teilen."
+      },
+      "prd_lunch": {
+        "name": "Mittags-Combo",
+        "description": "Kleine klassische Pizza mit einem Getränk deiner Wahl. Werktags 11–15 Uhr."
+      },
+      "prd_gamenight": {
+        "name": "Spieleabend-Paket",
+        "description": "3 große Pizzen, 16 Wings und Trüffel-Pommes — gemacht für das große Spiel."
+      }
+    }
+  }
+}

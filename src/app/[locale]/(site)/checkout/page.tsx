@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link, useRouter } from "@/i18n/navigation";
+import { useContent } from "@/hooks/use-content";
+import { useFormat } from "@/hooks/use-format";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AnimatePresence, motion } from "motion/react";
@@ -37,7 +39,7 @@ import { useCartTotals } from "@/hooks/use-cart-totals";
 import { useCurrentCustomer, useSession } from "@/hooks/use-session";
 import { useOrderingStatus } from "@/hooks/use-catalog";
 import { checkoutSchema, type CheckoutValues } from "@/lib/validation";
-import { formatCurrency, uid } from "@/lib/format";
+import { uid } from "@/lib/format";
 import { lineTotal } from "@/lib/pricing";
 import { cn } from "@/lib/utils";
 
@@ -55,6 +57,10 @@ function Step({ n, title, children }: { n: number; title: string; children: Reac
 
 function CheckoutForm() {
   const router = useRouter();
+  const tc = useTranslations("checkout");
+  const tv = useTranslations();
+  const content = useContent();
+  const f = useFormat();
   const session = useSession("customer")!;
   const customer = useCurrentCustomer();
   const items = useCartStore((s) => s.items);
@@ -101,19 +107,19 @@ function CheckoutForm() {
   const unavailable = items.filter((i) => !products.find((p) => p.id === i.productId)?.available);
   const blockers = [
     !canOrder && reason,
-    unavailable.length > 0 && `Remove unavailable items: ${unavailable.map((i) => i.name).join(", ")}.`,
-    fulfillment === "delivery" && totals.belowMinimum > 0 && `Delivery needs a ${formatCurrency(restaurant.delivery.minOrder)} minimum — add ${formatCurrency(totals.belowMinimum)} more or choose pickup.`,
-    fulfillment === "delivery" && !restaurant.delivery.enabled && "Delivery is currently unavailable — please choose pickup.",
-    fulfillment === "pickup" && !restaurant.pickup.enabled && "Pickup is currently unavailable — please choose delivery.",
+    unavailable.length > 0 && tc("blockers.unavailable", { items: unavailable.map((i) => content.productName({ id: i.productId, name: i.name })).join(", ") }),
+    fulfillment === "delivery" && totals.belowMinimum > 0 && tc("blockers.minimum", { minimum: f.currency(restaurant.delivery.minOrder), amount: f.currency(totals.belowMinimum) }),
+    fulfillment === "delivery" && !restaurant.delivery.enabled && tc("blockers.noDelivery"),
+    fulfillment === "pickup" && !restaurant.pickup.enabled && tc("blockers.noPickup"),
   ].filter(Boolean) as string[];
 
   if (items.length === 0 && !placed) {
     return (
       <EmptyState
         icon={ShoppingBag}
-        title="Nothing to check out yet"
-        description="Your cart is empty. Add a pizza or two and come back here."
-        action={<Button asChild className="h-12 rounded-full px-7"><Link href="/menu">Browse the menu</Link></Button>}
+        title={tc("emptyTitle")}
+        description={tc("emptyBody")}
+        action={<Button asChild className="h-12 rounded-full px-7"><Link href="/menu">{tc("browseMenu")}</Link></Button>}
         className="min-h-[60vh]"
       />
     );
@@ -121,7 +127,7 @@ function CheckoutForm() {
 
   const onSubmit = async (values: CheckoutValues) => {
     if (blockers.length) {
-      toast.error("We can't place this order yet", { description: blockers[0] });
+      toast.error(tc("cantPlace"), { description: blockers[0] });
       return;
     }
     setPlacing(true);
@@ -132,7 +138,7 @@ function CheckoutForm() {
       if (values.addressId === "new") {
         address = `${values.line1}, ${values.city} ${values.postalCode}`;
         if (values.saveAddress && customer) {
-          saveAddress(customer.id, { id: uid("addr"), label: addresses.length ? "Other" : "Home", line1: values.line1, city: values.city, postalCode: values.postalCode, isDefault: addresses.length === 0 });
+          saveAddress(customer.id, { id: uid("addr"), label: addresses.length ? tc("addressOther") : tc("addressHome"), line1: values.line1, city: values.city, postalCode: values.postalCode, isDefault: addresses.length === 0 });
         }
       } else {
         const a = addresses.find((x) => x.id === values.addressId);
@@ -155,47 +161,47 @@ function CheckoutForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit, () => toast.error("Please check your details", { description: "Some required fields need attention." }))} noValidate className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+    <form onSubmit={handleSubmit(onSubmit, () => toast.error(tc("checkDetails"), { description: tc("checkDetailsBody") }))} noValidate className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <h1 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">Checkout</h1>
+          <h1 className="font-display text-4xl font-semibold tracking-tight sm:text-5xl">{tc("title")}</h1>
           <p className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground">
-            <ShieldCheck className="size-4 text-basil-500" aria-hidden="true" /> Signed in as <strong className="text-foreground">{session.email}</strong>
+            <ShieldCheck className="size-4 text-basil-500" aria-hidden="true" /> {tc.rich("signedInAs", { email: session.email, strong: (c) => <strong className="text-foreground">{c}</strong> })}
           </p>
         </div>
-        <Link href="/cart" className="text-sm font-semibold text-primary hover:underline">Edit cart</Link>
+        <Link href="/cart" className="text-sm font-semibold text-primary hover:underline">{tc("editCart")}</Link>
       </div>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_26rem]">
         <div className="min-w-0 space-y-6">
-          <Step n={1} title="Contact details">
+          <Step n={1} title={tc("steps.contact")}>
             <div className="grid gap-4 sm:grid-cols-2">
-              <FormField label="Full name" required error={errors.name?.message} className="sm:col-span-2">
+              <FormField label={tc("fields.name")} required error={errors.name?.message} className="sm:col-span-2">
                 <Input autoComplete="name" className="h-11 rounded-xl" {...register("name")} />
               </FormField>
-              <FormField label="Phone number" required error={errors.phone?.message} hint="The driver will call if needed">
+              <FormField label={tc("fields.phone")} required error={errors.phone?.message} hint={tc("fields.phoneHint")}>
                 <Input type="tel" autoComplete="tel" placeholder="(212) 555-0123" className="h-11 rounded-xl" {...register("phone")} />
               </FormField>
-              <FormField label="Email" required error={errors.email?.message} hint="For your demo receipt">
+              <FormField label={tc("fields.email")} required error={errors.email?.message} hint={tc("fields.emailHint")}>
                 <Input type="email" autoComplete="email" className="h-11 rounded-xl" {...register("email")} />
               </FormField>
             </div>
           </Step>
 
-          <Step n={2} title="Delivery or pickup">
+          <Step n={2} title={tc("steps.fulfillment")}>
             <FulfillmentToggle value={fulfillment} onChange={(v) => setValue("fulfillment", v, { shouldValidate: true })} name="checkout-fulfillment" />
             <AnimatePresence mode="wait" initial={false}>
               {fulfillment === "delivery" ? (
                 <motion.div key="delivery" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} className="mt-5 space-y-4">
                   <fieldset>
-                    <legend className="mb-3 text-sm font-medium">Delivery address</legend>
+                    <legend className="mb-3 text-sm font-medium">{tc("deliveryAddress")}</legend>
                     <div className="grid gap-3 sm:grid-cols-2">
                       {addresses.map((a) => (
                         <label key={a.id} className="flex cursor-pointer gap-3 rounded-2xl border-2 border-border p-4 transition hover:border-primary/40 has-checked:border-primary has-checked:bg-primary/5 has-focus-visible:ring-3 has-focus-visible:ring-ring/40">
                           <input type="radio" value={a.id} className="sr-only" {...register("addressId")} />
                           <MapPin className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
                           <span className="min-w-0 text-sm">
-                            <span className="flex items-center gap-2 font-semibold">{a.label}{a.isDefault && <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold uppercase">Default</span>}</span>
+                            <span className="flex items-center gap-2 font-semibold">{a.label}{a.isDefault && <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold uppercase">{tc("default")}</span>}</span>
                             <span className="block text-muted-foreground">{a.line1}{a.line2 ? `, ${a.line2}` : ""}</span>
                             <span className="block text-muted-foreground">{a.city} {a.postalCode}</span>
                           </span>
@@ -204,24 +210,24 @@ function CheckoutForm() {
                       ))}
                       <label className="flex cursor-pointer items-center gap-3 rounded-2xl border-2 border-dashed border-border p-4 text-sm font-semibold transition hover:border-primary/40 has-checked:border-primary has-checked:bg-primary/5 has-focus-visible:ring-3 has-focus-visible:ring-ring/40">
                         <input type="radio" value="new" className="sr-only" {...register("addressId")} />
-                        <Plus className="size-5 text-primary" aria-hidden="true" /> Use a new address
+                        <Plus className="size-5 text-primary" aria-hidden="true" /> {tc("newAddress")}
                       </label>
                     </div>
                   </fieldset>
                   {addressId === "new" && (
                     <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} className="grid gap-4 overflow-hidden px-0.5 pb-0.5 sm:grid-cols-[1fr_10rem]">
-                      <FormField label="Street address" required error={errors.line1?.message} className="sm:col-span-2">
-                        <Input autoComplete="street-address" placeholder="214 Spring Street, Apt 3" className="h-11 rounded-xl" {...register("line1")} />
+                      <FormField label={tc("fields.street")} required error={errors.line1?.message} className="sm:col-span-2">
+                        <Input autoComplete="street-address" placeholder={tc("fields.streetPlaceholder")} className="h-11 rounded-xl" {...register("line1")} />
                       </FormField>
-                      <FormField label="City" required error={errors.city?.message}>
+                      <FormField label={tc("fields.city")} required error={errors.city?.message}>
                         <Input autoComplete="address-level2" className="h-11 rounded-xl" {...register("city")} />
                       </FormField>
-                      <FormField label="ZIP code" required error={errors.postalCode?.message}>
+                      <FormField label={tc("fields.zip")} required error={errors.postalCode?.message}>
                         <Input inputMode="numeric" autoComplete="postal-code" placeholder="10012" className="h-11 rounded-xl" {...register("postalCode")} />
                       </FormField>
                       <div className="flex items-center gap-2 sm:col-span-2">
                         <Checkbox id="save-address" defaultChecked onCheckedChange={(v) => setValue("saveAddress", v === true)} />
-                        <Label htmlFor="save-address" className="text-sm font-normal">Save this address to my account</Label>
+                        <Label htmlFor="save-address" className="text-sm font-normal">{tc("saveAddress")}</Label>
                       </div>
                     </motion.div>
                   )}
@@ -230,57 +236,57 @@ function CheckoutForm() {
                 <motion.div key="pickup" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} className="mt-5 flex gap-3 rounded-2xl bg-muted p-4 text-sm">
                   <MapPin className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
                   <div>
-                    <p className="font-semibold">Pick up at {restaurant.name}</p>
-                    <p className="text-muted-foreground">{restaurant.address}, {restaurant.city} · ready in ~{restaurant.pickup.estimatedMinutes} min</p>
+                    <p className="font-semibold">{tc("pickupAt", { name: restaurant.name })}</p>
+                    <p className="text-muted-foreground">{restaurant.address}, {restaurant.city} · {tc("readyIn", { minutes: restaurant.pickup.estimatedMinutes })}</p>
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
-            <FormField label={fulfillment === "delivery" ? "Delivery instructions" : "Notes for the kitchen"} error={errors.instructions?.message} className="mt-5">
-              <Textarea placeholder={fulfillment === "delivery" ? "Gate code, floor, leave at door…" : "Anything we should know?"} className="min-h-20 rounded-xl" {...register("instructions")} />
+            <FormField label={fulfillment === "delivery" ? tc("fields.instructions") : tc("fields.kitchenNotes")} error={errors.instructions?.message} className="mt-5">
+              <Textarea placeholder={fulfillment === "delivery" ? tc("fields.instructionsPlaceholder") : tc("fields.kitchenNotesPlaceholder")} className="min-h-20 rounded-xl" {...register("instructions")} />
             </FormField>
           </Step>
 
-          <Step n={3} title="Payment">
-            <div role="radiogroup" aria-label="Payment method" className="grid gap-3">
+          <Step n={3} title={tc("steps.payment")}>
+            <div role="radiogroup" aria-label={tc("paymentMethod")} className="grid gap-3">
               <label className="flex cursor-pointer items-center gap-4 rounded-2xl border-2 border-primary bg-primary/5 p-4 has-focus-visible:ring-3 has-focus-visible:ring-ring/40">
                 <input type="radio" value="cod" className="sr-only" {...register("paymentMethod")} />
                 <span className="flex size-11 items-center justify-center rounded-xl bg-basil-500 text-white"><Banknote className="size-5" aria-hidden="true" /></span>
                 <span className="flex-1">
-                  <span className="block font-semibold">Cash on Delivery</span>
-                  <span className="block text-sm text-muted-foreground">Pay the {fulfillment === "delivery" ? "driver" : "counter"} when your order arrives</span>
+                  <span className="block font-semibold">{tc("cod")}</span>
+                  <span className="block text-sm text-muted-foreground">{fulfillment === "delivery" ? tc("codDelivery") : tc("codPickup")}</span>
                 </span>
                 <Check className="size-5 text-primary" aria-hidden="true" />
               </label>
-              {[{ icon: CreditCard, label: "Credit or debit card" }, { icon: Apple, label: "Apple Pay / Google Pay" }].map((m) => (
+              {[{ icon: CreditCard, label: tc("card") }, { icon: Apple, label: tc("wallet") }].map((m) => (
                 <div key={m.label} aria-disabled="true" className="flex items-center gap-4 rounded-2xl border-2 border-dashed border-border p-4 opacity-60">
                   <span className="flex size-11 items-center justify-center rounded-xl bg-muted"><m.icon className="size-5" aria-hidden="true" /></span>
                   <span className="flex-1 font-semibold">{m.label}</span>
-                  <span className="rounded-full bg-muted px-2.5 py-1 text-[11px] font-semibold uppercase">Coming soon</span>
+                  <span className="rounded-full bg-muted px-2.5 py-1 text-[11px] font-semibold uppercase">{tc("comingSoon")}</span>
                 </div>
               ))}
             </div>
-            {errors.paymentMethod && <p role="alert" className="mt-2 text-xs font-medium text-destructive">{errors.paymentMethod.message}</p>}
+            {errors.paymentMethod && <p role="alert" className="mt-2 text-xs font-medium text-destructive">{tv(errors.paymentMethod.message as "validation.paymentRequired")}</p>}
           </Step>
 
-          <Step n={4} title="Review your order">
+          <Step n={4} title={tc("steps.review")}>
             <ul className="divide-y">
               {items.map((item) => (
                 <li key={item.id} className="flex gap-3 py-3 first:pt-0 last:pb-0">
                   <div className="relative size-14 shrink-0 overflow-hidden rounded-xl bg-muted"><Image src={item.image} alt="" fill sizes="56px" className="object-cover" /></div>
                   <div className="min-w-0 flex-1 text-sm">
-                    <p className="font-semibold"><span className="text-muted-foreground">{item.quantity}×</span> {item.name}</p>
-                    <p className="text-xs text-muted-foreground">{[item.size?.name, item.crust?.name, ...item.toppings.map((t) => `+ ${t.name}`), ...item.addons.map((a) => `+ ${a.name}`)].filter(Boolean).join(" · ")}</p>
+                    <p className="font-semibold"><span className="text-muted-foreground">{item.quantity}×</span> {content.productName({ id: item.productId, name: item.name })}</p>
+                    <p className="text-xs text-muted-foreground">{[item.size && content.sizeText(item.size.name), item.crust && content.crustName(item.crust), ...item.toppings.map((o) => `+ ${content.toppingName(o.id, o.name)}`), ...item.addons.map((o) => `+ ${content.addonName(o.id, o.name)}`)].filter(Boolean).join(" · ")}</p>
                   </div>
-                  <p className="tabular text-sm font-semibold">{formatCurrency(lineTotal(item))}</p>
+                  <p className="tabular text-sm font-semibold">{f.currency(lineTotal(item))}</p>
                 </li>
               ))}
             </ul>
           </Step>
         </div>
 
-        <aside aria-label="Order summary" className="h-fit space-y-5 rounded-3xl bg-card p-6 shadow-sm ring-1 ring-border lg:sticky lg:top-28">
-          <h2 className="text-lg font-semibold">Order summary</h2>
+        <aside aria-label={tc("summary")} className="h-fit space-y-5 rounded-3xl bg-card p-6 shadow-sm ring-1 ring-border lg:sticky lg:top-28">
+          <h2 className="text-lg font-semibold">{tc("summary")}</h2>
           <FreeDeliveryProgress totals={totals} />
           <PromoCodeInput />
           <TotalsList totals={totals} />
@@ -292,10 +298,10 @@ function CheckoutForm() {
             </div>
           )}
           <Button type="submit" disabled={placing || blockers.length > 0} className="h-14 w-full rounded-full text-base font-semibold shadow-lg shadow-primary/25">
-            {placing ? (<><Loader2 className="animate-spin" /> Placing your order…</>) : (<><Lock /> Place order · {formatCurrency(totals.total)}</>)}
+            {placing ? (<><Loader2 className="animate-spin" /> {tc("placing")}</>) : (<><Lock /> {tc("place", { total: f.currency(totals.total) })}</>)}
           </Button>
           <p className={cn("rounded-xl bg-muted px-3 py-2 text-center text-xs text-muted-foreground")}>
-            Demo transaction — no payment is taken and no food will be delivered.
+            {tc("demoNote")}
           </p>
         </aside>
       </div>

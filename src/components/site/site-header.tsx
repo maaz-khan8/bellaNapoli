@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import NextLink from "next/link";
+import { useTranslations } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { LanguageSwitcher } from "@/components/site/language-switcher";
 import { AnimatePresence, motion } from "motion/react";
 import {
   ChefHat,
@@ -37,12 +39,12 @@ import { initials } from "@/lib/format";
 import { cn } from "@/lib/utils";
 
 const NAV = [
-  { href: "/", label: "Home" },
-  { href: "/menu", label: "Menu" },
-  { href: "/menu?category=deals", label: "Deals" },
-  { href: "/#about", label: "Our Story" },
-  { href: "/#visit", label: "Visit" },
-];
+  { href: "/", label: "home" },
+  { href: "/menu", label: "menu" },
+  { href: "/menu?category=deals", label: "deals" },
+  { href: "/#about", label: "story" },
+  { href: "/#visit", label: "visit" },
+] as const;
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -55,6 +57,8 @@ export function SiteHeader() {
   const session = useSession("customer");
   const logout = useAuthStore((s) => s.logout);
   const { canOrder, reason } = useOrderingStatus();
+  const t = useTranslations("nav");
+  const tb = useTranslations("banner");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -65,7 +69,7 @@ export function SiteHeader() {
 
   const signOut = () => {
     logout("customer");
-    toast.success("Signed out", { description: "See you again soon!" });
+    toast.success(t("signedOut"), { description: t("signedOutBody") });
     router.push("/");
   };
 
@@ -79,9 +83,7 @@ export function SiteHeader() {
           {canOrder ? (
             <>
               <Sparkles className="size-4 shrink-0 text-ember-400" aria-hidden="true" />
-              <span>
-                Free delivery over $40 · Use <strong className="text-ember-300">WELCOME10</strong> for 10% off
-              </span>
+              <span>{tb.rich("promo", { code: (c) => <strong className="text-ember-300">{c}</strong> })}</span>
             </>
           ) : (
             <span role="status" className="text-ember-200">{reason}</span>
@@ -94,23 +96,23 @@ export function SiteHeader() {
           scrolled ? "glass border-b border-border/60 shadow-[0_8px_30px_-12px_rgb(0_0_0/0.15)]" : "bg-background",
         )}
       >
-        <div className="mx-auto flex h-18 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-18 max-w-7xl items-center gap-2 px-4 sm:gap-4 sm:px-6 lg:px-8">
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon-lg" className="lg:hidden" aria-label="Open navigation menu">
+              <Button variant="ghost" size="icon-lg" className="lg:hidden" aria-label={t("openMenu")}>
                 <MenuIcon className="size-5" />
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-[85%] max-w-sm bg-cream-100 p-0" showCloseButton={false}>
               <div className="flex items-center justify-between border-b px-5 py-4">
                 <Logo />
-                <Button variant="ghost" size="icon-lg" onClick={() => setMobileOpen(false)} aria-label="Close menu">
+                <Button variant="ghost" size="icon-lg" onClick={() => setMobileOpen(false)} aria-label={t("closeMenu")}>
                   <X className="size-5" />
                 </Button>
               </div>
-              <SheetTitle className="sr-only">Navigation</SheetTitle>
-              <SheetDescription className="sr-only">Site navigation and account links</SheetDescription>
-              <nav className="flex flex-col gap-1 px-3" aria-label="Mobile">
+              <SheetTitle className="sr-only">{t("navigation")}</SheetTitle>
+              <SheetDescription className="sr-only">{t("navigationDescription")}</SheetDescription>
+              <nav className="flex flex-col gap-1 px-3" aria-label={t("mobileNav")}>
                 {NAV.map((item) => (
                   <Link
                     key={item.href}
@@ -121,23 +123,23 @@ export function SiteHeader() {
                       isActive(item.href) && "bg-white text-primary",
                     )}
                   >
-                    {item.label}
+                    {t(item.label)}
                   </Link>
                 ))}
               </nav>
               <div className="mt-auto space-y-2 border-t p-5 text-sm">
                 {session ? (
                   <>
-                    <Link href="/account" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 py-2 font-medium"><User className="size-4" /> My account</Link>
-                    <Link href="/account/orders" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 py-2 font-medium"><Package className="size-4" /> My orders</Link>
-                    <button onClick={() => { setMobileOpen(false); signOut(); }} className="flex items-center gap-2 py-2 font-medium text-destructive"><LogOut className="size-4" /> Sign out</button>
+                    <Link href="/account" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 py-2 font-medium"><User className="size-4" /> {t("myAccount")}</Link>
+                    <Link href="/account/orders" onClick={() => setMobileOpen(false)} className="flex items-center gap-2 py-2 font-medium"><Package className="size-4" /> {t("myOrders")}</Link>
+                    <button onClick={() => { setMobileOpen(false); signOut(); }} className="flex items-center gap-2 py-2 font-medium text-destructive"><LogOut className="size-4" /> {t("signOut")}</button>
                   </>
                 ) : (
-                  <Button asChild className="h-11 w-full rounded-full"><Link href="/login" onClick={() => setMobileOpen(false)}>Sign in or register</Link></Button>
+                  <Button asChild className="h-11 w-full rounded-full"><Link href="/login" onClick={() => setMobileOpen(false)}>{t("signInOrRegister")}</Link></Button>
                 )}
                 <div className="flex gap-4 pt-3 text-xs text-muted-foreground">
-                  <Link href="/manager/login" className="inline-flex items-center gap-1 hover:text-foreground"><ChefHat className="size-3.5" /> Manager portal</Link>
-                  <Link href="/super-admin/login" className="inline-flex items-center gap-1 hover:text-foreground"><ShieldCheck className="size-3.5" /> Super Admin</Link>
+                  <NextLink href="/manager/login" className="inline-flex items-center gap-1 hover:text-foreground"><ChefHat className="size-3.5" /> {t("managerPortal")}</NextLink>
+                  <NextLink href="/super-admin/login" className="inline-flex items-center gap-1 hover:text-foreground"><ShieldCheck className="size-3.5" /> {t("superAdmin")}</NextLink>
                 </div>
               </div>
             </SheetContent>
@@ -145,7 +147,7 @@ export function SiteHeader() {
 
           <Logo className="mr-auto lg:mr-0" />
 
-          <nav className="mx-auto hidden items-center gap-1 lg:flex" aria-label="Main">
+          <nav className="mx-auto hidden items-center gap-1 lg:flex" aria-label={t("mainNav")}>
             {NAV.map((item) => (
               <Link
                 key={item.href}
@@ -155,7 +157,7 @@ export function SiteHeader() {
                   isActive(item.href) && "text-primary",
                 )}
               >
-                {item.label}
+                {t(item.label)}
                 {isActive(item.href) && (
                   <motion.span layoutId="nav-pill" className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-primary" />
                 )}
@@ -167,10 +169,11 @@ export function SiteHeader() {
             <Link href="/#visit" className="hidden items-center gap-1.5 rounded-full px-3 py-2 text-xs font-medium text-muted-foreground hover:text-foreground xl:inline-flex">
               <MapPin className="size-4 text-primary" /> Mulberry St, NYC
             </Link>
+            <LanguageSwitcher />
             {session ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <button className="flex size-11 items-center justify-center rounded-full bg-charcoal-900 text-sm font-semibold text-white ring-2 ring-transparent transition hover:ring-primary/40" aria-label="Account menu">
+                  <button className="hidden size-11 items-center justify-center rounded-full bg-charcoal-900 text-sm font-semibold text-white ring-2 ring-transparent transition hover:ring-primary/40 sm:flex" aria-label={t("accountMenu")}>
                     {initials(session.name)}
                   </button>
                 </DropdownMenuTrigger>
@@ -180,16 +183,16 @@ export function SiteHeader() {
                     <p className="truncate text-xs font-normal text-muted-foreground">{session.email}</p>
                   </DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem asChild><Link href="/account"><User /> My account</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link href="/account/orders"><Package /> My orders</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link href="/account/addresses"><MapPin /> Addresses</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link href="/account"><User /> {t("myAccount")}</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link href="/account/orders"><Package /> {t("myOrders")}</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link href="/account/addresses"><MapPin /> {t("addresses")}</Link></DropdownMenuItem>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem variant="destructive" onSelect={signOut}><LogOut /> Sign out</DropdownMenuItem>
+                  <DropdownMenuItem variant="destructive" onSelect={signOut}><LogOut /> {t("signOut")}</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
               <Button asChild variant="ghost" className="hidden h-11 rounded-full px-4 font-semibold sm:inline-flex">
-                <Link href="/login"><User className="size-4" /> Sign in</Link>
+                <Link href="/login"><User className="size-4" /> {t("signIn")}</Link>
               </Button>
             )}
             <motion.button
@@ -199,10 +202,10 @@ export function SiteHeader() {
               transition={{ duration: 0.45 }}
               onClick={() => setCartOpen(true)}
               className="relative flex h-11 items-center gap-2 rounded-full bg-primary px-4 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:bg-tomato-600"
-              aria-label={`Open cart, ${count} item${count === 1 ? "" : "s"}`}
+              aria-label={t("openCart", { count })}
             >
               <ShoppingBag className="size-5" />
-              <span className="hidden sm:inline">Cart</span>
+              <span className="hidden sm:inline">{t("cart")}</span>
               <AnimatePresence>
                 {count > 0 && (
                   <motion.span
